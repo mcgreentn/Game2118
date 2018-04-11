@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
-    public Dialogue dialogue;
+    public Dialogue[] dialogues;
+    public int counter;
     public Sprite image;
     private Manager M;
 	private BoxCollider2D colliderbox;
@@ -20,11 +21,6 @@ public class Interactable : MonoBehaviour {
 	 void Update()
 	{
 
-        //if (Input.GetKeyDown(KeyCode.Space) && interacting == 1)
-        //{
-        //    M.HideInteractionPane();
-        //    TriggerDialogue();
-        //} 
 	}
 
 	void OnCollisionEnter2D(Collision2D other) 
@@ -49,9 +45,4 @@ public class Interactable : MonoBehaviour {
         M.HideInteractionPane();
 	}
 
-    public void TriggerDialogue() {
-        M.ShowDialoguePane(dialogue.name, image);
-        Debug.Log("Starting dialogue up: " + this.name);
-        M.StartDialogue(this);
-    }
 }

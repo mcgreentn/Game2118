@@ -75,6 +75,27 @@ public class Manager : MonoBehaviour {
     }
 
     public void StartDialogue(Interactable me) {
+        GameStats.CanMove = false;
+        ShowDialoguePane(me.name, me.image);
+        HideInteractionPane();
+        StartCoroutine(TalkingToRoutine());
+        Debug.Log("[Begin conversation with " + me.name + "]");
+
+        sentences.Clear();
+
+        foreach(string sentence in me.dialogues[me.counter].sentences) {
+            sentences.Enqueue(sentence);
+        }
+        me.counter++;
+        if(me.counter > me.dialogues.Length-1) {
+            me.counter = 0;
+        }
+        Debug.Log("Sentences size: " + sentences.Count);
+        DisplayNextSentence();
+    }
+
+    public void StartDialogue(Guard me) {
+        GameStats.CanMove = false;
         ShowDialoguePane(me.dialogue.name, me.image);
         HideInteractionPane();
         StartCoroutine(TalkingToRoutine());
@@ -82,7 +103,8 @@ public class Manager : MonoBehaviour {
 
         sentences.Clear();
 
-        foreach(string sentence in me.dialogue.sentences) {
+        foreach (string sentence in me.dialogue.sentences)
+        {
             sentences.Enqueue(sentence);
         }
 
@@ -106,6 +128,7 @@ public class Manager : MonoBehaviour {
     }
 
     void EndDialogue() {
+        GameStats.CanMove = true;
         talking = 0;
         currentInteractable = null;
         HideDialoguePane();

@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    /// <summary>
+    /// The move speed.
+    /// </summary>
     public float moveSpeed;
     private Animator anim;
     private Rigidbody2D myRigidBody;
+
+
     // Use this for initialization
     void Start()
     {
@@ -37,10 +42,19 @@ public class PlayerMovement : MonoBehaviour
                 //transform.Translate(0f,Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f);
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
             }
-            //anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-            //anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+
+            if(Input.GetKeyDown(KeyCode.X)) {
+                if(GameStats.IsStealthed) {
+                    Debug.Log("Player unstealthed");
+                    GameStats.IsStealthed = false;
+                } else {
+                    Debug.Log("Player stealthed");
+                    GameStats.IsStealthed = true;
+                }
+            }
         } else {
             myRigidBody.velocity = new Vector2(0f, 0f);
         }
     }
+
 }

@@ -13,4 +13,7 @@ public class GameStats {
 	/// The game has begun
 	/// </summary>
     public static bool BeginGame = true;
+
+
+    public static bool IsStealthed = false;
 }

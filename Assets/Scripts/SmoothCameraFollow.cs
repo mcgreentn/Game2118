@@ -14,5 +14,6 @@ public class SmoothCameraFollow : MonoBehaviour {
 	void LateUpdate()
 	{
         transform.position = target.position + offset;
+
 	}
 }
