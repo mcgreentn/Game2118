@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour {
 
     public Dialogue[] dialogues;
+    public string name;
     public int counter;
     public Sprite image;
     private Manager M;

@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     /// The move speed.
     /// </summary>
     public float moveSpeed;
+
+    public SpriteRenderer player;
     private Animator anim;
     private Rigidbody2D myRigidBody;
 
@@ -47,9 +49,12 @@ public class Player : MonoBehaviour
                 if(GameStats.IsStealthed) {
                     Debug.Log("Player unstealthed");
                     GameStats.IsStealthed = false;
+                    MakeTransparent(255f);
                 } else {
                     Debug.Log("Player stealthed");
                     GameStats.IsStealthed = true;
+                    MakeTransparent(180f);
+
                 }
             }
         } else {
@@ -57,4 +62,8 @@ public class Player : MonoBehaviour
         }
     }
 
+
+    void MakeTransparent(float alpha){
+        player.color = new Color(1f, 1f, 1f, alpha/255f);
+    }
 }

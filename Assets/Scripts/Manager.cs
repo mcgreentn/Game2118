@@ -20,7 +20,11 @@ public class Manager : MonoBehaviour {
 
     public Animator DialogueAnimator;
 
-    public Queue<string> sentences;
+    //public Queue<string> sentences;
+    //public Queue<string> names;
+    //public Queue<Sprite> faces;
+
+    public Queue<Entity> entities;
 
     Coroutine Typing = null;
 
@@ -30,7 +34,8 @@ public class Manager : MonoBehaviour {
 
 	private void Start()
 	{
-        sentences = new Queue<string>();
+        entities = new Queue<Entity>();
+        //sentences = new Queue<string>();
 	}
 	void Update()
 	{
@@ -61,11 +66,9 @@ public class Manager : MonoBehaviour {
         interacting = 0;
     }
 
-    public void ShowDialoguePane(string name, Sprite image) {
+    public void ShowDialoguePane() {
         //DialoguePane.SetActive(true);
         DialogueAnimator.SetBool("IsOpen", true);
-        DialogueName.text = name;
-        Face.sprite = image;
         HideInteractionPane();
     }
 
@@ -76,50 +79,64 @@ public class Manager : MonoBehaviour {
 
     public void StartDialogue(Interactable me) {
         GameStats.CanMove = false;
-        ShowDialoguePane(me.name, me.image);
+        ShowDialoguePane();
         HideInteractionPane();
         StartCoroutine(TalkingToRoutine());
         Debug.Log("[Begin conversation with " + me.name + "]");
 
-        sentences.Clear();
+        entities.Clear();
+        //sentences.Clear();
+        //names.Clear();
+        //faces.Clear();
 
-        foreach(string sentence in me.dialogues[me.counter].sentences) {
-            sentences.Enqueue(sentence);
+        //foreach(string sentence in me.dialogues[me.counter].sentences) {
+        //    sentences.Enqueue(sentence);
+        //}
+        foreach(Entity entity in me.dialogues[me.counter].entities){
+            entities.Enqueue(entity);
         }
         me.counter++;
         if(me.counter > me.dialogues.Length-1) {
             me.counter = 0;
         }
-        Debug.Log("Sentences size: " + sentences.Count);
+        Debug.Log("Dialogue size: " + entities.Count);
         DisplayNextSentence();
     }
 
     public void StartDialogue(Guard me) {
         GameStats.CanMove = false;
-        ShowDialoguePane(me.dialogue.name, me.image);
+        ShowDialoguePane();
         HideInteractionPane();
         StartCoroutine(TalkingToRoutine());
-        Debug.Log("[Begin conversation with " + me.dialogue.name + "]");
+        Debug.Log("[Begin conversation with " + me.name + "]");
 
-        sentences.Clear();
+        //sentences.Clear();
+        entities.Clear();
+        //foreach (string sentence in me.dialogue.sentences)
+        //{
+        //    sentences.Enqueue(sentence);
+        //}
 
-        foreach (string sentence in me.dialogue.sentences)
+        foreach (Entity entity in me.dialogue.entities)
         {
-            sentences.Enqueue(sentence);
+            entities.Enqueue(entity);
         }
-
-        Debug.Log("Sentences size: " + sentences.Count);
+        Debug.Log("Dialogue size: " + entities.Count);
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
-        if(sentences.Count == 0) {
+        if(entities.Count == 0) {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        //DialogueText.text = sentence;
+        Entity entity = entities.Dequeue();
+        string sentence = entity.sentence;
+        string name = entity.name;
+        Sprite face = entity.image;
+        DialogueName.text = name;
+        //DialogueFace.sprite = face;
         if(Typing != null) {
             StopCoroutine(Typing);
         }
