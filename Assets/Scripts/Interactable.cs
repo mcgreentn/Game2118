@@ -12,6 +12,8 @@ public class Interactable : MonoBehaviour {
 	private BoxCollider2D colliderbox;
     public int talking = 0;
     public int interacting = 0;
+
+    public int Type = 0;
 	// Use this for initialization
 	void Start () 
     {
@@ -26,7 +28,8 @@ public class Interactable : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) 
     {
-        M.ShowInteractionPane(name, "Press space to interact...", this);	
+        M.ShowInteractionPane(name, "Press space to interact...", this);
+
 	}
 
 	void OnCollisionExit2D(Collision2D collision)
@@ -45,5 +48,14 @@ public class Interactable : MonoBehaviour {
 	{
         M.HideInteractionPane();
 	}
+
+    public void Collect() {
+        if(Type == 1) {
+            //flip the bit for this
+        }
+        // TODO add more collectables
+
+        this.gameObject.SetActive(false);
+    }
 
 }

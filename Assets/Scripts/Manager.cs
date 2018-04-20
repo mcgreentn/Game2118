@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour {
 
     public GameObject DialoguePane;
     public Text DialogueName;
-    public SpriteRenderer Face;
+    public Image Face;
     public Text DialogueText;
 
 
@@ -101,6 +101,10 @@ public class Manager : MonoBehaviour {
         }
         Debug.Log("Dialogue size: " + entities.Count);
         DisplayNextSentence();
+        if(me.Type == 1) {
+            // collect this object
+            me.Collect();
+        }
     }
 
     public void StartDialogue(Guard me) {
@@ -123,6 +127,7 @@ public class Manager : MonoBehaviour {
         }
         Debug.Log("Dialogue size: " + entities.Count);
         DisplayNextSentence();
+
     }
 
     public void DisplayNextSentence() {
@@ -136,6 +141,7 @@ public class Manager : MonoBehaviour {
         string name = entity.name;
         Sprite face = entity.image;
         DialogueName.text = name;
+        Face.sprite = entity.image;
         //DialogueFace.sprite = face;
         if(Typing != null) {
             StopCoroutine(Typing);
@@ -160,8 +166,14 @@ public class Manager : MonoBehaviour {
 
     IEnumerator TypeSentence(string sentence) {
         DialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray()) {
-            DialogueText.text += letter;
+        char[] sent = sentence.ToCharArray();
+        for (int i = 0; i < sentence.Length; i++) {
+            DialogueText.text += sentence[i];
+            if (i < sentence.Length - 1)
+            {
+                i++;
+                DialogueText.text += sentence[i];
+            }
             yield return null;
         }
         Typing = null;

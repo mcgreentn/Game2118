@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     /// <summary>
@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D myRigidBody;
 
 
+    public Sprite[] playerImage;
+
     // Use this for initialization
     void Start()
     {
@@ -25,25 +27,48 @@ public class Player : MonoBehaviour
     void Update()
     {   
         if(GameStats.CanMove) {
-            if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
-            {
-                //transform.Translate(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f);
-                myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*moveSpeed,myRigidBody.velocity.y);
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+            myRigidBody.velocity = movement * moveSpeed;
+
+            if(moveHorizontal > 0.0f) {
+                player.sprite = playerImage[0];
             }
-            if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
-            {
-                //transform.Translate(0f,Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f);
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x,Input.GetAxisRaw("Vertical")*moveSpeed);
+            if(moveHorizontal < 0.0f) {
+                player.sprite = playerImage[3];
             }
-            if(Input.GetAxisRaw("Horizontal")<0.5f && Input.GetAxisRaw("Horizontal") > -0.5f)
-            {
-                myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
+            if(moveVertical > 0.0f) {
+                player.sprite = playerImage[2];
             }
-            if (Input.GetAxisRaw("Vertical") < 0.5f && Input.GetAxisRaw("Vertical") > -0.5f)
-            {
-                //transform.Translate(0f,Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f);
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
+            if(moveVertical < 0.0f) {
+                player.sprite = playerImage[1];
             }
+
+
+            //if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+            //{
+            //    //transform.Translate(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f);
+            //    player.sprite = playerImage[0];
+            //    myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal")*moveSpeed,myRigidBody.velocity.y);
+            //}
+            //if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+            //{
+            //    //transform.Translate(0f,Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f);
+            //    player.sprite = playerImage[1];
+            //    myRigidBody.velocity = new Vector2(myRigidBody.velocity.x,Input.GetAxisRaw("Vertical")*moveSpeed);
+            //}
+            //if(Input.GetAxisRaw("Horizontal")<0.5f && Input.GetAxisRaw("Horizontal") > -0.5f)
+            //{
+            //    player.sprite = playerImage[2];
+            //    myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
+            //}
+            //if (Input.GetAxisRaw("Vertical") < 0.5f && Input.GetAxisRaw("Vertical") > -0.5f)
+            //{
+            //    //transform.Translate(0f,Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f);
+            //    player.sprite = playerImage[3];
+            //    myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
+            //}
 
             if(Input.GetKeyDown(KeyCode.X)) {
                 if(GameStats.IsStealthed) {
@@ -54,11 +79,11 @@ public class Player : MonoBehaviour
                     Debug.Log("Player stealthed");
                     GameStats.IsStealthed = true;
                     MakeTransparent(180f);
-
                 }
             }
         } else {
             myRigidBody.velocity = new Vector2(0f, 0f);
+
         }
     }
 

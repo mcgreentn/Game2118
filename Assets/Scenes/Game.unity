@@ -208,135 +208,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &62159087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 62159091}
-  - component: {fileID: 62159090}
-  - component: {fileID: 62159089}
-  - component: {fileID: 62159088}
-  m_Layer: 0
-  m_Name: Bill Saget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &62159088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62159087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - entities:
-    - name: Bob Saget
-      sentence: Ow what was that crash?
-      image: {fileID: 0}
-    - name: Bob Saget
-      sentence: My head is killing me...
-      image: {fileID: 0}
-    - name: Bob Saget
-      sentence: I think I need a doctor.
-      image: {fileID: 0}
-  - entities:
-    - name: Bob Saget
-      sentence: I think my leg might be broken
-      image: {fileID: 0}
-    - name: Bob Saget
-      sentence: Where is that doctor?
-      image: {fileID: 0}
-  name: 
-  counter: 0
-  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
-  talking: 0
-  interacting: 0
---- !u!212 &62159089
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62159087}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.46}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
---- !u!50 &62159090
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62159087}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!4 &62159091
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 62159087}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26647893, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1830045813}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71982216
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +236,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1639272611}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -412,6 +283,100 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71982216}
+--- !u!1 &210574428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 210574429}
+  - component: {fileID: 210574432}
+  - component: {fileID: 210574430}
+  m_Layer: 0
+  m_Name: Socialite2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &210574429
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210574428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1763583131}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &210574430
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210574428}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!212 &210574432
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210574428}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300210, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 46.666664, y: 80}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &333451031
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,75 +521,108 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 333494139}
---- !u!1 &795206217
+--- !u!1 &368799778
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 795206222}
-  - component: {fileID: 795206221}
-  - component: {fileID: 795206220}
-  - component: {fileID: 795206219}
-  - component: {fileID: 795206218}
+  - component: {fileID: 368799783}
+  - component: {fileID: 368799782}
+  - component: {fileID: 368799781}
+  - component: {fileID: 368799780}
+  - component: {fileID: 368799779}
   m_Layer: 0
-  m_Name: George Washington
+  m_Name: PPC Journalist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &795206218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795206217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - entities: []
-  - entities: []
-  name: 
-  counter: 0
-  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
-  talking: 0
-  interacting: 0
---- !u!61 &795206219
+--- !u!61 &368799779
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795206217}
+  m_GameObject: {fileID: 368799778}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005822584, y: -0.036391318}
+  m_Offset: {x: 0.43267345, y: 4.4918137}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.46}
-    newSize: {x: 0.32, y: 0.46}
+    oldSize: {x: 59.999996, y: 86.666664}
+    newSize: {x: 46.666664, y: 80}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2093704, y: 0.29987812}
+  m_Size: {x: 59.39077, y: 82.316956}
   m_EdgeRadius: 0
---- !u!212 &795206220
+--- !u!50 &368799780
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368799778}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &368799781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368799778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: PPC Journalist
+      sentence: "Can you believe that the CEO is going to give a speech about how
+        he's the world's savior? He\u2019s so full of crap."
+      image: {fileID: 21300182, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: PPC Journalist
+      sentence: "He talks like he\u2019s all about helping humanity, but it\u2019s
+        all lies. Half of his inventions have failed, and the others come at too high
+        of a price."
+      image: {fileID: 21300182, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: PPC Journalist
+      sentence: "Don\u2019t get me started all the humanitarian rights violations
+        that take place in some of his foreign factories..."
+      image: {fileID: 21300182, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  name: PPC Journalist
+  counter: 0
+  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  talking: 0
+  interacting: 0
+  Type: 0
+--- !u!212 &368799782
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795206217}
+  m_GameObject: {fileID: 368799778}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -653,48 +651,28 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  m_Sprite: {fileID: 21300146, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.46}
+  m_Size: {x: 46.666664, y: 80}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!50 &795206221
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795206217}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!4 &795206222
+--- !u!4 &368799783
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795206217}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.7525597, y: -0.81131, z: 0}
-  m_LocalScale: {x: 3.4970176, y: 3.4970152, z: 3.4970152}
+  m_GameObject: {fileID: 368799778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: 0.12, z: 0}
+  m_LocalScale: {x: 0.012870035, y: 0.011202554, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800660999
 GameObject:
@@ -750,7 +728,7 @@ Transform:
   m_LocalScale: {x: 3.56501, y: 3.5650077, z: 3.5650077}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &800661002
 Rigidbody2D:
@@ -789,6 +767,7 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
   talking: 0
   interacting: 0
+  Type: 0
 --- !u!1 &957090291
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,19 +796,71 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1639272611}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470.9, y: -22.5}
-  m_SizeDelta: {x: 243.6, y: 221.5}
+  m_AnchoredPosition: {x: -463.8, y: -22.41}
+  m_SizeDelta: {x: 243.6, y: 221.31}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &957090293
-SpriteRenderer:
+--- !u!114 &957090293
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 957090291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &957090294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957090291}
+--- !u!1 &997682531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 997682533}
+  - component: {fileID: 997682532}
+  - component: {fileID: 997682536}
+  - component: {fileID: 997682535}
+  - component: {fileID: 997682534}
+  m_Layer: 0
+  m_Name: Your Boss, Greg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &997682532
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 997682531}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -858,22 +889,116 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300048, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 46.666664, y: 80}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!222 &957090294
-CanvasRenderer:
+--- !u!4 &997682533
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 957090291}
+  m_GameObject: {fileID: 997682531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.044, y: -7.509, z: 0}
+  m_LocalScale: {x: 0.014370356, y: 0.013150081, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &997682534
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 997682531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 53.333332, y: 73.33333}
+    newSize: {x: 46.666664, y: 80}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 53.333332, y: 73.33333}
+  m_EdgeRadius: 0
+--- !u!50 &997682535
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 997682531}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &997682536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 997682531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Your Boss, Greg
+      sentence: "Are you ready, Pl\xE1yer\xF8 Ne? This could be big for our firm if
+        we get a good angle for this announcement."
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: "I\u2019m your boss, so technically I should be against this. But
+        I\u2019m going to make an exception this time."
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: "Here is a InvisChip. I know, they are highly illegal, but you\u2019ll
+        to sneak past security to get closer."
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: '*You now have an InivisChip!*'
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: "In case you don\u2019t know, an InivisChip allows you to become INVISIBLE;
+        not even the best vision can see you."
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: "To use it, press the X button on the chip. Yeah, that one right there.
+        Why don\u2019t you try it now? Then come speak to me."
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  name: Your Boss, Greg
+  counter: 0
+  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  talking: 0
+  interacting: 0
+  Type: 0
 --- !u!1 &1190786975
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +1049,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b87af01fe06e4446585141b9b432db4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 988a5a59807d2471699fc64999edaf45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -941,8 +1066,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1190786975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.4, y: 10.2, z: 0}
-  m_LocalScale: {x: 8.00769, y: 8.007679, z: 8.007679}
+  m_LocalPosition: {x: -1.505, y: 1.217, z: 0}
+  m_LocalScale: {x: 3.7404583, y: 3.6964872, z: 8.007679}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -957,8 +1082,8 @@ GameObject:
   - component: {fileID: 1321883101}
   - component: {fileID: 1321883099}
   - component: {fileID: 1321883098}
-  - component: {fileID: 1321883100}
   - component: {fileID: 1321883097}
+  - component: {fileID: 1321883100}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -978,8 +1103,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    entities: []
-  image: {fileID: 0}
+    entities:
+    - name: Guard
+      sentence: Sorry, but only authorized personnel can be up here. I will now escort
+        you away from here.
+      image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
   talking: 0
   interacting: 0
 --- !u!61 &1321883098
@@ -994,18 +1123,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0028755404, y: -0.52538323}
+  m_Offset: {x: 0.039590072, y: -0.0011330526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.46}
+    oldSize: {x: 0.05, y: 0.06}
     newSize: {x: 0.32, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.044336, y: 0.94779277}
+  m_Size: {x: 0.11776508, y: 0.0623595}
   m_EdgeRadius: 0
 --- !u!212 &1321883099
 SpriteRenderer:
@@ -1041,7 +1170,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1063,18 +1192,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005822584, y: -0.012949005}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.46}
+    oldSize: {x: 0.05, y: 0.06}
     newSize: {x: 0.32, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2093704, y: 0.2529935}
+  m_Size: {x: 0.035, y: 0.06}
   m_EdgeRadius: 0
 --- !u!4 &1321883101
 Transform:
@@ -1083,11 +1212,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321883096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 1.15, z: 0}
-  m_LocalScale: {x: 3.56501, y: 3.5650077, z: 3.5650077}
+  m_LocalPosition: {x: -4.68, y: -3.15, z: 0}
+  m_LocalScale: {x: 16.490034, y: 15.139465, z: 3.5650077}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341971510
 GameObject:
@@ -1179,7 +1308,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1639272611}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1299,6 +1428,160 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509120513}
+--- !u!1 &1586133836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1586133841}
+  - component: {fileID: 1586133840}
+  - component: {fileID: 1586133839}
+  - component: {fileID: 1586133838}
+  - component: {fileID: 1586133837}
+  m_Layer: 0
+  m_Name: The Times Journalist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1586133837
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586133836}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.10347748, y: 4.4918137}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 46.666664, y: 86.666664}
+    newSize: {x: 46.666664, y: 80}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40.081665, y: 82.316956}
+  m_EdgeRadius: 0
+--- !u!50 &1586133838
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586133836}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1586133839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586133836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: The Times Journalist
+      sentence: "I\u2019ve published some serious dirt on this company. They have
+        a lot of skeletons in the closet."
+      image: {fileID: 21300114, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: The Times Journalist
+      sentence: "Like the Bodega Accident of 2116. It wasn\u2019t an accident at all!
+        Big Corp cut corners on the endothermic piping, and now the corner store is
+        just rubble!"
+      image: {fileID: 21300114, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: The Times Journalist
+      sentence: "Or the Piscis Fishery Incident, when a \u2018faulty operator\u2019
+        dumped millions of gallons of toxic waste into freshwater. He was definitely
+        ordered to do so from the higher ups."
+      image: {fileID: 21300114, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  name: The Times Journalist
+  counter: 0
+  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  talking: 0
+  interacting: 0
+  Type: 0
+--- !u!212 &1586133840
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586133836}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300218, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 46.666664, y: 80}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1586133841
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586133836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.85, y: -0.18, z: 0}
+  m_LocalScale: {x: 0.012870035, y: 0.011202554, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601109194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1659,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601109194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.06, y: 0, z: -20}
+  m_LocalPosition: {x: -3.63, y: -5.71, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1495,9 +1778,9 @@ RectTransform:
   m_LocalScale: {x: 1.0000044, y: 1.0000044, z: 1.0000044}
   m_Children:
   - {fileID: 333451032}
-  - {fileID: 957090292}
   - {fileID: 71982217}
   - {fileID: 1443233668}
+  - {fileID: 957090292}
   m_Father: {fileID: 39164224}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1630,31 +1913,119 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00002325, y: -24.468}
   m_SizeDelta: {x: 650.7, y: 67.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1830045809
+--- !u!1 &1763583126
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1830045813}
-  - component: {fileID: 1830045811}
-  - component: {fileID: 1830045810}
-  - component: {fileID: 1830045814}
-  - component: {fileID: 1830045812}
+  - component: {fileID: 1763583131}
+  - component: {fileID: 1763583130}
+  - component: {fileID: 1763583129}
+  - component: {fileID: 1763583128}
+  - component: {fileID: 1763583127}
   m_Layer: 0
-  m_Name: Bob Saget
+  m_Name: Socialite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1830045810
+--- !u!61 &1763583127
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763583126}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 32.67582, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 46.666664, y: 86.666664}
+    newSize: {x: 46.666664, y: 80}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 118.68497, y: 73.33333}
+  m_EdgeRadius: 0
+--- !u!50 &1763583128
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763583126}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1763583129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763583126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Socialite
+      sentence: "I wonder if he\u2019s going to introduce a new technique on quantum
+        generative network technology. After their deep positronic brain announcement,
+        AI advancement has done leaps and bounds!"
+      image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Socialite
+      sentence: Big Corp is on an unsustainable path. They keep cut corners to stay
+        ahead of their competition. Eventually this will catch up to them...
+      image: {fileID: 21300184, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Your Boss, Greg
+      sentence: Oh come on, you're being paranoid. They do good things for society
+        and technology!
+      image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  - entities:
+    - name: Socialite
+      sentence: We can argue about this all day. They do underhanded deals to make
+        improvements. We all know it!
+      image: {fileID: 21300184, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Socialite
+      sentence: Thats nonsense! There's no evidence of any such thing.
+      image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Socialite
+      sentence: '*grumbles*'
+      image: {fileID: 21300184, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  name: Socialites
+  counter: 0
+  image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  talking: 0
+  interacting: 0
+  Type: 0
+--- !u!212 &1763583130
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830045809}
+  m_GameObject: {fileID: 1763583126}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -1683,23 +2054,81 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  m_Sprite: {fileID: 21300138, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.46}
+  m_Size: {x: 46.666664, y: 80}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!50 &1830045811
+--- !u!4 &1763583131
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763583126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.702, y: -4.86, z: 0}
+  m_LocalScale: {x: 0.014370356, y: 0.013150081, z: 1}
+  m_Children:
+  - {fileID: 210574429}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1936303634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1936303639}
+  - component: {fileID: 1936303638}
+  - component: {fileID: 1936303637}
+  - component: {fileID: 1936303636}
+  - component: {fileID: 1936303635}
+  m_Layer: 0
+  m_Name: The Free Press Journalist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1936303635
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936303634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.10347748, y: 4.4918137}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 46.666664, y: 80}
+    newSize: {x: 46.666664, y: 80}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40.081665, y: 82.316956}
+  m_EdgeRadius: 0
+--- !u!50 &1936303636
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830045809}
+  m_GameObject: {fileID: 1936303634}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -1707,18 +2136,18 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1830045812
+--- !u!114 &1936303637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830045809}
+  m_GameObject: {fileID: 1936303634}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
@@ -1726,66 +2155,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Bob Saget
-      sentence: Ow what was that crash?
-      image: {fileID: 0}
-    - name: Billy Bob
-      sentence: My head is killing me...
-      image: {fileID: 0}
-    - name: Bob Saget
-      sentence: I think Bill needs a doctor. Can you find one?
-      image: {fileID: 0}
-  - entities:
-    - name: Billy Bob
-      sentence: I think my leg might be broken
-      image: {fileID: 0}
-    - name: Bob Saget
-      sentence: Where is that doctor?
-      image: {fileID: 0}
-  name: Bob Saget and Billy Bob
+    - name: The Free Press Journalist
+      sentence: Big Bad has such a firm grip at the helm of Big Corp. Look at all
+        the good the company has done with him in charge.
+      image: {fileID: 21300092, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: The Free Press Journalist
+      sentence: "Stocks are up 25% this quarter alone. He\u2019s held over a dozen
+        philanthropy events this year. They\u2019ve raised $45 million for charity!"
+      image: {fileID: 21300092, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+  name: The Free Press Journalist
   counter: 0
   image: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
   talking: 0
   interacting: 0
---- !u!4 &1830045813
+  Type: 0
+--- !u!212 &1936303638
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936303634}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 46.666664, y: 80}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1936303639
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830045809}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8, y: 1.1113, z: 0}
-  m_LocalScale: {x: 3.4970176, y: 3.4970152, z: 3.4970152}
-  m_Children:
-  - {fileID: 62159091}
+  m_GameObject: {fileID: 1936303634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.15, y: 2.39, z: 0}
+  m_LocalScale: {x: 0.012870035, y: 0.011202554, z: 1}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1830045814
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830045809}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.13638273, y: -0.010279238}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.46}
-    newSize: {x: 0.32, y: 0.46}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.47049075, y: 0.24765396}
-  m_EdgeRadius: 0
 --- !u!1 &2092624945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +2275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127327436
 GameObject:
@@ -1883,11 +2323,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2127327436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14116001, y: -0.095232, z: 0}
-  m_LocalScale: {x: 3.4970176, y: 3.4970152, z: 3.4970152}
+  m_LocalPosition: {x: -4.1, y: -7.5, z: 0}
+  m_LocalScale: {x: 16.033833, y: 16.066122, z: 3.4970152}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2127327439
 MonoBehaviour:
@@ -1902,6 +2342,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
   player: {fileID: 2127327440}
+  playerImage:
+  - {fileID: 21300080, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
+  - {fileID: 21300082, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
+  - {fileID: 21300084, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
+  - {fileID: 21300086, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
 --- !u!212 &2127327440
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1936,7 +2381,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c393e6f50889b4e4b8ca80edf35db4a8, type: 3}
+  m_Sprite: {fileID: 21300082, guid: 6afbbab6f63d54d82a79e727353425a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1958,16 +2403,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013735071, y: -0.03983049}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.46}
+    oldSize: {x: 0.045, y: 0.06}
     newSize: {x: 0.32, y: 0.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2238575, y: 0.3034249}
+  m_Size: {x: 0.045, y: 0.06}
   m_EdgeRadius: 0
