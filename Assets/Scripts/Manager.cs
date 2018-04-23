@@ -20,6 +20,10 @@ public class Manager : MonoBehaviour {
 
     public Animator DialogueAnimator;
 
+    // The player character
+    public GameObject Player;
+
+    public ParticleSystem WhereToGo;
     //public Queue<string> sentences;
     //public Queue<string> names;
     //public Queue<Sprite> faces;
@@ -32,6 +36,13 @@ public class Manager : MonoBehaviour {
     public int talking = 0;
     public Interactable currentInteractable;
 
+
+    public int eventNum = 0;
+    // Fade Animator
+    public Animator FadeAnimator;
+    //The Bad Guy
+    public GameObject TheBadMan;
+    public GameObject DoorGuard;
 	private void Start()
 	{
         entities = new Queue<Entity>();
@@ -137,6 +148,7 @@ public class Manager : MonoBehaviour {
         }
 
         Entity entity = entities.Dequeue();
+        eventNum = entity.eventNum;
         string sentence = entity.sentence;
         string name = entity.name;
         Sprite face = entity.image;
@@ -148,6 +160,7 @@ public class Manager : MonoBehaviour {
         }
         Typing = StartCoroutine(TypeSentence(sentence));
         Debug.Log(sentence);
+
     }
 
     void EndDialogue() {
@@ -156,6 +169,10 @@ public class Manager : MonoBehaviour {
         currentInteractable = null;
         HideDialoguePane();
         Debug.Log("[Ending dialogue]");
+        if (eventNum != 0)
+        {
+            PlayEvent(eventNum);
+        }
     }
 
 
@@ -177,5 +194,65 @@ public class Manager : MonoBehaviour {
             yield return null;
         }
         Typing = null;
+    }
+
+
+    public void Level1_1() {
+        WhereToGo.gameObject.transform.localPosition = new Vector2(175f, 292f);
+        WhereToGo.Play();
+    }
+
+    public void Level1_2() {
+        WhereToGo.gameObject.transform.localPosition = new Vector2(-176f, -294f);
+        WhereToGo.Play();
+    }
+    public void Level1_3() {
+        WhereToGo.gameObject.transform.localPosition = new Vector2(-178f, -289f);
+        WhereToGo.Play();
+        // fade to black briefly
+        FadeAnimator.SetBool("Fade", true);
+        StartCoroutine(MakeBadGuyLeave1());
+    }
+
+    public void ResetLevel1() {
+        FadeAnimator.SetBool("Fade", true);
+        StartCoroutine(Reset1());
+    }
+
+    public void GoToLevel2() {
+        // TODO make level 2
+    }
+    public void PlayEvent(int eventNum) {
+        if(eventNum == 1) {
+            Level1_1();
+        }
+        else if(eventNum == 2) {
+            Level1_2();
+        }
+        else if(eventNum == 3) {
+            Level1_3();
+        }
+        else if(eventNum == 4) {
+            GoToLevel2();
+        }
+        else if(eventNum == 90) {
+            ResetLevel1();
+        }
+    }
+
+
+
+
+    IEnumerator Reset1() {
+        yield return new WaitForSeconds(1.0f);
+        Player.transform.position = new Vector2(-3.5f, -7.5f);
+        FadeAnimator.SetBool("Fade", false);
+    }
+    IEnumerator MakeBadGuyLeave1() {
+        yield return new WaitForSeconds(1.0f);
+        TheBadMan.SetActive(false);
+        DoorGuard.SetActive(false);
+        FadeAnimator.SetBool("Fade", false);
+
     }
 }

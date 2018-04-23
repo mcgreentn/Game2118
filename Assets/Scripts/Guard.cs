@@ -35,5 +35,13 @@ public class Guard : MonoBehaviour
         }
     }
 
+	//private void OnCollisionEnter2D(Collision2D collision)
+	//{
+ //       if (!GameStats.IsStealthed)
+ //       {
+ //           M.StartDialogue(this);
+ //       }
+	//}
+
 
 }
