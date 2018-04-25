@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
 
 
     public Sprite[] playerImage;
-
+    // Stealth Animator
+    public Animator StealthAnimator;
     // Use this for initialization
     void Start()
     {
@@ -33,15 +34,19 @@ public class Player : MonoBehaviour
             myRigidBody.velocity = movement * moveSpeed;
 
             if(moveHorizontal > 0.0f) {
-                player.sprite = playerImage[0];
+                anim.Play("Left");
+                //player.sprite = playerImage[0];
             }
             if(moveHorizontal < 0.0f) {
+                anim.Play("Right");
                 player.sprite = playerImage[3];
             }
             if(moveVertical > 0.0f) {
+                anim.Play("Up");
                 player.sprite = playerImage[2];
             }
             if(moveVertical < 0.0f) {
+                anim.Play("Down");
                 player.sprite = playerImage[1];
             }
 
@@ -72,13 +77,11 @@ public class Player : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.X)) {
                 if(GameStats.IsStealthed) {
-                    Debug.Log("Player unstealthed");
-                    GameStats.IsStealthed = false;
-                    MakeTransparent(255f);
+
+                    StealthOff();
                 } else {
-                    Debug.Log("Player stealthed");
-                    GameStats.IsStealthed = true;
-                    MakeTransparent(180f);
+
+                    StealthOn();
                 }
             }
         } else {
@@ -90,5 +93,21 @@ public class Player : MonoBehaviour
 
     void MakeTransparent(float alpha){
         player.color = new Color(1f, 1f, 1f, alpha/255f);
+    }
+
+    public void StealthOn()
+    {
+        Debug.Log("Player stealthed");
+        GameStats.IsStealthed = true;
+        MakeTransparent(180f);
+        StealthAnimator.SetBool("Stealthed", true);
+    }
+
+    public void StealthOff()
+    {
+        Debug.Log("Player unstealthed");
+        GameStats.IsStealthed = false;
+        MakeTransparent(255f);
+        StealthAnimator.SetBool("Stealthed", false);
     }
 }

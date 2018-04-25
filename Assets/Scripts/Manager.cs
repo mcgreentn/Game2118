@@ -40,9 +40,15 @@ public class Manager : MonoBehaviour {
     public int eventNum = 0;
     // Fade Animator
     public Animator FadeAnimator;
+
+
+    public Vector2 PlayerRespawn;
+
     //The Bad Guy
     public GameObject TheBadMan;
     public GameObject DoorGuard;
+    public GameObject ExtraGuard;
+
 	private void Start()
 	{
         entities = new Queue<Entity>();
@@ -52,14 +58,24 @@ public class Manager : MonoBehaviour {
 	{
         if(Input.GetKeyDown(KeyCode.Space) && interacting == 1) 
         {
-            StartDialogue(currentInteractable);
+            if (GameStats.IsStealthed && currentInteractable.Type != 1)
+            {
+                StartEvesdropping(currentInteractable);
+            }
+            else
+            {
+                StartDialogue(currentInteractable);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Space) && talking == 1)
         {
             DisplayNextSentence();
+        }else if(Input.GetKeyDown(KeyCode.F) && interacting == 1) {
+            StartInvestigate(currentInteractable);
         }
 	}
     public void ShowInteractionPane(string name, string text, Interactable me) {
+        
         currentInteractable = me;
         InteractionPane.SetActive(true);
         SetUpInteractionPane(name, text);
@@ -96,13 +112,7 @@ public class Manager : MonoBehaviour {
         Debug.Log("[Begin conversation with " + me.name + "]");
 
         entities.Clear();
-        //sentences.Clear();
-        //names.Clear();
-        //faces.Clear();
 
-        //foreach(string sentence in me.dialogues[me.counter].sentences) {
-        //    sentences.Enqueue(sentence);
-        //}
         foreach(Entity entity in me.dialogues[me.counter].entities){
             entities.Enqueue(entity);
         }
@@ -112,10 +122,58 @@ public class Manager : MonoBehaviour {
         }
         Debug.Log("Dialogue size: " + entities.Count);
         DisplayNextSentence();
-        if(me.Type == 1) {
+        if(me.Type == 2) {
             // collect this object
             me.Collect();
         }
+    }
+
+    public void StartEvesdropping(Interactable me)
+    {
+        GameStats.CanMove = false;
+        ShowDialoguePane();
+        HideInteractionPane();
+        StartCoroutine(TalkingToRoutine());
+        Debug.Log("[Begin conversation with " + me.name + "]");
+
+        entities.Clear();
+
+        if (me.evesdroppings.Length > 0)
+        {
+            foreach (Entity entity in me.evesdroppings[0].entities)
+            {
+                entities.Enqueue(entity);
+            }
+        }
+        Debug.Log("Dialogue size: " + entities.Count);
+        DisplayNextSentence();
+        if (me.Type == 2)
+        {
+            // collect this object
+            me.Collect();
+        }
+    }
+
+    public void StartInvestigate(Interactable me) {
+        GameStats.CanMove = false;
+        ShowDialoguePane();
+        HideInteractionPane();
+        StartCoroutine(TalkingToRoutine());
+        Debug.Log("[Begin investigate with " + me.name + "]");
+
+        foreach (Entity entity in me.investigates[0].entities)
+        {
+            entities.Enqueue(entity);
+        }
+
+        Debug.Log("Investigates size: " + entities.Count);
+        DisplayNextSentence();
+        if (me.Type == 1)
+        {
+            // collect this object
+            me.Collect();
+        }
+
     }
 
     public void StartDialogue(Guard me) {
@@ -125,12 +183,7 @@ public class Manager : MonoBehaviour {
         StartCoroutine(TalkingToRoutine());
         Debug.Log("[Begin conversation with " + me.name + "]");
 
-        //sentences.Clear();
         entities.Clear();
-        //foreach (string sentence in me.dialogue.sentences)
-        //{
-        //    sentences.Enqueue(sentence);
-        //}
 
         foreach (Entity entity in me.dialogue.entities)
         {
@@ -196,6 +249,9 @@ public class Manager : MonoBehaviour {
         Typing = null;
     }
 
+    public void Level1_0() {
+        PlayerRespawn = new Vector2(-3.5f, -7.5f);
+    }
 
     public void Level1_1() {
         WhereToGo.gameObject.transform.localPosition = new Vector2(175f, 292f);
@@ -212,6 +268,7 @@ public class Manager : MonoBehaviour {
         // fade to black briefly
         FadeAnimator.SetBool("Fade", true);
         StartCoroutine(MakeBadGuyLeave1());
+        PlayerRespawn = new Vector2(-1.0f, -1.0f);
     }
 
     public void ResetLevel1() {
@@ -243,15 +300,18 @@ public class Manager : MonoBehaviour {
 
 
 
+
     IEnumerator Reset1() {
         yield return new WaitForSeconds(1.0f);
-        Player.transform.position = new Vector2(-3.5f, -7.5f);
+        Player.transform.position = PlayerRespawn;
+            //new Vector2(-3.5f, -7.5f);
         FadeAnimator.SetBool("Fade", false);
     }
     IEnumerator MakeBadGuyLeave1() {
         yield return new WaitForSeconds(1.0f);
         TheBadMan.SetActive(false);
         DoorGuard.SetActive(false);
+        ExtraGuard.SetActive(true);
         FadeAnimator.SetBool("Fade", false);
 
     }
