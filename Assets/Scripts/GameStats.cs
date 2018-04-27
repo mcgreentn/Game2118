@@ -15,4 +15,8 @@ public class GameStats {
     public static bool BeginGame = true;
 
     public static bool IsStealthed = false;
+
+    public static bool Green;
+    public static bool Blue;
+    public static bool Red;
 }

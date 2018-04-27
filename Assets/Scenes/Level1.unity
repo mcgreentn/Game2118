@@ -526,12 +526,12 @@ Prefab:
     - target: {fileID: 224924744347574174, guid: fa346658a9f154012a8c2bd4ea4da666,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 358.18
+      value: 341
       objectReference: {fileID: 0}
     - target: {fileID: 224924744347574174, guid: fa346658a9f154012a8c2bd4ea4da666,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 505.7
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 114775230897996748, guid: fa346658a9f154012a8c2bd4ea4da666,
         type: 2}
@@ -1166,6 +1166,11 @@ RectTransform:
   - {fileID: 460878727}
   - {fileID: 1853354743}
   - {fileID: 633164902}
+  - {fileID: 2065800774}
+  - {fileID: 1473092317}
+  - {fileID: 582497389}
+  - {fileID: 1539324338}
+  - {fileID: 1759487075}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1385,6 +1390,167 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 368b8be9d2b124818986a30356787d1f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &582497388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 582497389}
+  - component: {fileID: 582497391}
+  - component: {fileID: 582497390}
+  m_Layer: 0
+  m_Name: Elevator Computer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &582497389
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582497388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473295276}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.48, y: 7.767}
+  m_SizeDelta: {x: 0.947, y: 1.611}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &582497390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582497388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Sophie
+      sentence: 'This elaborate digital panel has a list of floors on it:
+
+        Floor 1 - Lobby - Green Keycard
+
+        Floor 2 - Research & Development - Yellow Keycard
+
+        Floor 3 - Human-Computer Interaction - Golden Keycard
+
+        .....'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: 'Floor 4 - Marketing - Purple Keycard
+
+        Floor 5 - Human Resources - Pink Keycard
+
+        Floor 6 - Customer Service - Brown Keycard
+
+        Floor 7 - Product Development - Grey Keycard
+
+        .....'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: 'Floor 8 - Systems Management - Silver Keycard
+
+        Floor 9 - Systems Management Management - White Keycard
+
+        Floor 10 - Management - Black Keycard
+
+        ...'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: "Floor 11 - Mr. Big\u2019s Office - Red Keycard\nBasement 1 - Research
+        Laboratory - Blue Keycard"
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  investigates:
+  - entities:
+    - name: Sophie
+      sentence: 'This elaborate digital panel has a list of floors on it:
+
+        Floor 1 - Lobby - Green Keycard
+
+        Floor 2 - Research & Development - Yellow Keycard
+
+        Floor 3 - Human-Computer Interaction - Golden Keycard
+
+        .....'
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: 'Floor 4 - Marketing - Purple Keycard
+
+        Floor 5 - Human Resources - Pink Keycard
+
+        Floor 6 - Customer Service - Brown Keycard
+
+        Floor 7 - Product Development - Grey Keycard
+
+        .....'
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: 'Floor 8 - Systems Management - Silver Keycard
+
+        Floor 9 - Systems Management Management - White Keycard
+
+        Floor 10 - Management - Black Keycard
+
+        ...'
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Sophie
+      sentence: "Floor 11 - Mr. Big\u2019s Office - Red Keycard\nBasement 1 - Research
+        Laboratory - Blue Keycard"
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings: []
+  name: Elevator Computer
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 0
+  interactPrompt: 
+--- !u!61 &582497391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582497388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.16904986}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1611059}
+  m_EdgeRadius: 0
 --- !u!1 &598742032
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,12 +3922,287 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5964012, y: 1.741046}
   m_EdgeRadius: 0
+--- !u!1 &1473092314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1473092317}
+  - component: {fileID: 1473092316}
+  - component: {fileID: 1473092315}
+  - component: {fileID: 1473092318}
+  m_Layer: 0
+  m_Name: Secretary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1473092315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473092314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Sophie
+      sentence: I probably shouldn't try to talk to her and cause a scene. Bad idea.
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  investigates:
+  - entities:
+    - name: Sophie
+      sentence: "A human greeter. Classic. This job could\u2019ve, should\u2019ve
+        been made obsolete years ago, but people still like talking to other people
+        more than robots. At least she probably makes decent pay. Lucky her. "
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings:
+  - entities:
+    - name: Secretary
+      sentence: (on phone) Yeah yeah, so then I said 'no way' and he said 'yes way!'
+        Can you believe it? Omigosh I cannot even...
+      image: {fileID: 21300002, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  name: Secretary
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 0
+  interactPrompt: 
+--- !u!212 &1473092316
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473092314}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300050, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 45, y: 55}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1473092317
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473092314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.9200008, y: 1.0700006, z: 0}
+  m_LocalScale: {x: 0.015875796, y: 0.017203193, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473295276}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1473092318
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473092314}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 45, y: 55}
+    newSize: {x: 45, y: 55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 45, y: 55}
+  m_EdgeRadius: 0
 --- !u!114 &1509120515 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114213471801911100, guid: fa346658a9f154012a8c2bd4ea4da666,
     type: 2}
   m_PrefabInternal: {fileID: 189891432}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1539324337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1539324338}
+  - component: {fileID: 1539324341}
+  - component: {fileID: 1539324340}
+  - component: {fileID: 1539324339}
+  m_Layer: 0
+  m_Name: blue keycard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539324338
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539324337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.725, y: 7.223, z: 0}
+  m_LocalScale: {x: 4.110697, y: 3.3055878, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473295276}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1539324339
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539324337}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.12, y: 0.1}
+    newSize: {x: 0.12, y: 0.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.12, y: 0.1}
+  m_EdgeRadius: 0
+--- !u!114 &1539324340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539324337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Sophie
+      sentence: 'Aha! A blue keycard! I wonder which floor this could take me to...
+        Better take it with me.
+
+
+        *Sophie now has the Blue Keycard!*'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 22
+  investigates:
+  - entities:
+    - name: Sophie
+      sentence: This keycard looks newly minted, like it was made for someone as a
+        replacement. I bet this could take me to another floor...
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings: []
+  name: 
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 2
+  interactPrompt: 
+--- !u!212 &1539324341
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539324337}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1423341027
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300022, guid: a173fbd05191c47a7b30c3829fa2094f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.12, y: 0.1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1586133836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,6 +4915,124 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1759487074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1759487075}
+  - component: {fileID: 1759487077}
+  - component: {fileID: 1759487076}
+  - component: {fileID: 1759487078}
+  m_Layer: 0
+  m_Name: Elevators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1759487075
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759487074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473295276}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.48, y: 8.287}
+  m_SizeDelta: {x: 4.002, y: 1.261}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &1759487076
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759487074}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.6788799, y: -0.14342189}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4555767, y: 1.2868438}
+  m_EdgeRadius: 0
+--- !u!61 &1759487077
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759487074}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.712626, y: -0.15185857}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4893208, y: 1.3037171}
+  m_EdgeRadius: 0
+--- !u!114 &1759487078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759487074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Sophie
+      sentence: This elevator leads to other floors of the building. Let's go inside!
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  investigates:
+  - entities:
+    - name: Sophie
+      sentence: I bet this elevator will take me to other floors...if I have the right
+        keycard.
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings: []
+  name: Elevator
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 1
+  interactPrompt: 
 --- !u!1 &1763583126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +6136,101 @@ MonoBehaviour:
   talking: 0
   interacting: 0
   Type: 1
+  interactPrompt: 
+--- !u!1 &2065800773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2065800774}
+  - component: {fileID: 2065800775}
+  - component: {fileID: 2065800776}
+  m_Layer: 0
+  m_Name: Secretarial Computers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2065800774
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065800773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473295276}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.361, y: 0.3476}
+  m_SizeDelta: {x: 1.634, y: 0.6951}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &2065800775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065800773}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004691124, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6473875, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2065800776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065800773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Sophie
+      sentence: "It\u2019s pretty much impossible to make out the details of these
+        monitors without bumping into the secretary. It appears these monitors seem
+        to track the schedules throughout the building. "
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  investigates:
+  - entities:
+    - name: Sophie
+      sentence: "It\u2019s pretty much impossible to make out the details of these
+        monitors without bumping into the secretary. It appears these monitors seem
+        to track the schedules throughout the building. "
+      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings: []
+  name: Secretarial Computers
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 0
   interactPrompt: 
 --- !u!1 &2078053406
 GameObject:

@@ -56,14 +56,15 @@ public class Manager : MonoBehaviour {
 	private void Start()
 	{
         entities = new Queue<Entity>();
-        Level1_0();
+        //Level1_0();
+        GoToLevel2();
         //sentences = new Queue<string>();
 	}
 	void Update()
 	{
         if(Input.GetKeyDown(KeyCode.Space) && interacting == 1) 
         {
-            if (GameStats.IsStealthed && currentInteractable.Type != 1)
+            if (GameStats.IsStealthed && (currentInteractable.Type != 1 && currentInteractable.Type != 2))
             {
                 StartEvesdropping(currentInteractable);
             }
@@ -296,11 +297,30 @@ public class Manager : MonoBehaviour {
         PlayerRespawn = new Vector2(-1.0f, -1.0f);
     }
 
+    public void Level2_0() {
+        // pick up green keycard
+    }
+
+    public void Level2_1() {
+        // open security office door
+    }
+
+    public void Level2_2() {
+        // pick up blue keycard
+        GameStats.Blue = true;
+    }
+
     public void ResetLevel1() {
         FadeAnimator.SetBool("Fade", true);
         StartCoroutine(Reset1());
     }
 
+
+    public void GoToElevator() {
+        FadeAnimator.SetBool("Fade", true);
+        //PlayerRespawn =
+        StartCoroutine(GoToElev());
+    }
     public void GoToLevel2() {
         // TODO make level 2
         FadeAnimator.SetBool("Fade", true);
@@ -340,6 +360,7 @@ public class Manager : MonoBehaviour {
         Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
         WhereToGo.Stop();
+        Announcement(1);
     }
     IEnumerator MakeBadGuyLeave1() {
         yield return new WaitForSeconds(1.0f);
@@ -348,5 +369,13 @@ public class Manager : MonoBehaviour {
         ExtraGuard.SetActive(true);
         FadeAnimator.SetBool("Fade", false);
 
+    }
+
+    IEnumerator GoToElev() {
+        yield return new WaitForSeconds(1.0f);
+        Level1.SetActive(false);
+        Level2.SetActive(false);
+        Player.transform.position = PlayerRespawn;
+        FadeAnimator.SetBool("Fade", false);
     }
 }
