@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-//        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -34,21 +34,25 @@ public class Player : MonoBehaviour
             myRigidBody.velocity = movement * moveSpeed;
 
             if(moveHorizontal > 0.0f) {
-                anim.Play("Left");
+                anim.Play("Right");
                 //player.sprite = playerImage[0];
             }
-            if(moveHorizontal < 0.0f) {
-                anim.Play("Right");
+            else if(moveHorizontal < 0.0f) {
+                anim.Play("Left");
                 player.sprite = playerImage[3];
             }
-            if(moveVertical > 0.0f) {
+            else if(moveVertical > 0.0f) {
                 anim.Play("Up");
                 player.sprite = playerImage[2];
             }
-            if(moveVertical < 0.0f) {
+            else if(moveVertical < 0.0f) {
                 anim.Play("Down");
                 player.sprite = playerImage[1];
+            } else {
+                anim.Play("Static");
+                myRigidBody.velocity = new Vector2(0f, 0f);
             }
+
 
 
             //if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
@@ -86,6 +90,7 @@ public class Player : MonoBehaviour
             }
         } else {
             myRigidBody.velocity = new Vector2(0f, 0f);
+            anim.Play("Static");
 
         }
     }

@@ -49,9 +49,14 @@ public class Manager : MonoBehaviour {
     public GameObject DoorGuard;
     public GameObject ExtraGuard;
 
+
+    // Maps
+    public GameObject Level1;
+    public GameObject Level2;
 	private void Start()
 	{
         entities = new Queue<Entity>();
+        Level1_0();
         //sentences = new Queue<string>();
 	}
 	void Update()
@@ -176,6 +181,25 @@ public class Manager : MonoBehaviour {
 
     }
 
+    public void Announcement(int id) {
+        GameStats.CanMove = false;
+        ShowDialoguePane();
+        HideInteractionPane();
+        StartCoroutine(TalkingToRoutine());
+        Debug.Log("[Begin announcement]");
+
+        entities.Clear();
+
+        foreach (Entity entity in this.GetComponent<Interactable>().dialogues[id].entities)
+        {
+            entities.Enqueue(entity);
+        }
+
+        Debug.Log("Dialogue size: " + entities.Count);
+        DisplayNextSentence();
+
+    }
+
     public void StartDialogue(Guard me) {
         GameStats.CanMove = false;
         ShowDialoguePane();
@@ -251,6 +275,7 @@ public class Manager : MonoBehaviour {
 
     public void Level1_0() {
         PlayerRespawn = new Vector2(-3.5f, -7.5f);
+        Announcement(0);
     }
 
     public void Level1_1() {
@@ -278,6 +303,9 @@ public class Manager : MonoBehaviour {
 
     public void GoToLevel2() {
         // TODO make level 2
+        FadeAnimator.SetBool("Fade", true);
+        PlayerRespawn = new Vector2(-3f, -7f);
+        StartCoroutine(GoTo2());
     }
     public void PlayEvent(int eventNum) {
         if(eventNum == 1) {
@@ -298,14 +326,20 @@ public class Manager : MonoBehaviour {
     }
 
 
-
-
-
     IEnumerator Reset1() {
         yield return new WaitForSeconds(1.0f);
         Player.transform.position = PlayerRespawn;
             //new Vector2(-3.5f, -7.5f);
         FadeAnimator.SetBool("Fade", false);
+    }
+
+    IEnumerator GoTo2() {
+        yield return new WaitForSeconds(1.0f);
+        Level1.SetActive(false);
+        Level2.SetActive(true);
+        Player.transform.position = PlayerRespawn;
+        FadeAnimator.SetBool("Fade", false);
+        WhereToGo.Stop();
     }
     IEnumerator MakeBadGuyLeave1() {
         yield return new WaitForSeconds(1.0f);
