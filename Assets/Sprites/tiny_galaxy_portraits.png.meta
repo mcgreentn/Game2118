@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7eb437e729dc24058aaa534aabd121ee
-timeCreated: 1524842176
+timeCreated: 1525227291
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,11 +84,11 @@ TextureImporter:
     21300154: tiny_galaxy_portraits_77
     21300156: tiny_galaxy_portraits_78
     21300158: tiny_galaxy_portraits_79
-    21300160: tiny_galaxy_portraits_80
+    21300160: henchperson
     21300162: tiny_galaxy_portraits_81
     21300164: tiny_galaxy_portraits_82
     21300166: tiny_galaxy_portraits_83
-    21300168: tiny_galaxy_portraits_84
+    21300168: The Bad Man
     21300170: tiny_galaxy_portraits_85
     21300172: tiny_galaxy_portraits_86
     21300174: tiny_galaxy_portraits_87
@@ -1330,7 +1330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tiny_galaxy_portraits_80
+      name: henchperson
       rect:
         serializedVersion: 2
         x: 0
@@ -1386,7 +1386,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tiny_galaxy_portraits_84
+      name: The Bad Man
       rect:
         serializedVersion: 2
         x: 128

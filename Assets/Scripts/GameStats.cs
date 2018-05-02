@@ -19,4 +19,6 @@ public class GameStats {
     public static bool Green;
     public static bool Blue;
     public static bool Red;
+
+    public static bool KnowsBlue;
 }

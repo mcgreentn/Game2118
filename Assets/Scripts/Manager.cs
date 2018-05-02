@@ -49,28 +49,35 @@ public class Manager : MonoBehaviour {
     public GameObject DoorGuard;
     public GameObject ExtraGuard;
 
+    public GameObject HeadOfSecurity;
+
+    // Security Door
+    public Animator SecurityDoor;
 
     // Maps
     public GameObject Level1;
     public GameObject Level2;
+    public GameObject Level3_1;
+    public GameObject Level3_2;
 	private void Start()
 	{
         entities = new Queue<Entity>();
         //Level1_0();
-        GoToLevel2();
+        //GoToLevel2();
+        //GoToLevel3_1From2();
         //sentences = new Queue<string>();
 	}
 	void Update()
 	{
         if(Input.GetKeyDown(KeyCode.Space) && interacting == 1) 
         {
-            if (GameStats.IsStealthed && (currentInteractable.Type != 1 && currentInteractable.Type != 2))
+            if (GameStats.IsStealthed && (currentInteractable.Type < 1))
             {
                 StartEvesdropping(currentInteractable);
-            }
+            } 
             else
             {
-                StartDialogue(currentInteractable);
+                specialInstanceCheck();
             }
         }
         else if (Input.GetKeyDown(KeyCode.Space) && talking == 1)
@@ -134,6 +141,30 @@ public class Manager : MonoBehaviour {
         }
     }
 
+    public void StartDialogue(Interactable me, int count)
+    {
+        GameStats.CanMove = false;
+        ShowDialoguePane();
+        HideInteractionPane();
+        StartCoroutine(TalkingToRoutine());
+        Debug.Log("[Begin conversation with " + me.name + "]");
+
+        entities.Clear();
+
+        foreach (Entity entity in me.dialogues[count].entities)
+        {
+            entities.Enqueue(entity);
+        }
+
+        Debug.Log("Dialogue size: " + entities.Count);
+        DisplayNextSentence();
+        if (me.Type == 2)
+        {
+            // collect this object
+            me.Collect();
+        }
+    }
+
     public void StartEvesdropping(Interactable me)
     {
         GameStats.CanMove = false;
@@ -174,7 +205,7 @@ public class Manager : MonoBehaviour {
 
         Debug.Log("Investigates size: " + entities.Count);
         DisplayNextSentence();
-        if (me.Type == 1)
+        if (me.Type == 2)
         {
             // collect this object
             me.Collect();
@@ -229,9 +260,16 @@ public class Manager : MonoBehaviour {
         eventNum = entity.eventNum;
         string sentence = entity.sentence;
         string name = entity.name;
-        Sprite face = entity.image;
         DialogueName.text = name;
-        Face.sprite = entity.image;
+
+        if(entity.image == null) {
+            Face.gameObject.SetActive(false);
+        } else {
+            Face.gameObject.SetActive(true);
+            Sprite face = entity.image;
+            Face.sprite = entity.image;
+        }
+
         //DialogueFace.sprite = face;
         if(Typing != null) {
             StopCoroutine(Typing);
@@ -297,13 +335,6 @@ public class Manager : MonoBehaviour {
         PlayerRespawn = new Vector2(-1.0f, -1.0f);
     }
 
-    public void Level2_0() {
-        // pick up green keycard
-    }
-
-    public void Level2_1() {
-        // open security office door
-    }
 
     public void Level2_2() {
         // pick up blue keycard
@@ -313,6 +344,13 @@ public class Manager : MonoBehaviour {
     public void ResetLevel1() {
         FadeAnimator.SetBool("Fade", true);
         StartCoroutine(Reset1());
+    }
+
+    public void SecurityOfficeDoor() {
+        if(GameStats.Green) {
+            // door is opened
+            SecurityDoor.Play("Open");
+        }
     }
 
 
@@ -325,7 +363,24 @@ public class Manager : MonoBehaviour {
         // TODO make level 2
         FadeAnimator.SetBool("Fade", true);
         PlayerRespawn = new Vector2(-3f, -7f);
-        StartCoroutine(GoTo2());
+        StartCoroutine(GoTo2(true));
+    }
+    public void GoToLevel2From3_1() {
+        FadeAnimator.SetBool("Fade", true);
+        PlayerRespawn = new Vector2(-3.2f, 0.8f);
+        StartCoroutine(GoTo2(false));
+    }
+
+    public void GoToLevel3_1From2() {
+        FadeAnimator.SetBool("Fade", true);
+        PlayerRespawn = new Vector2(-3.1f, -6.7f);
+        StartCoroutine(GoTo3_1(true));
+    }
+
+    public void GoToLevel3_1From3_2() {
+        FadeAnimator.SetBool("Fade", true);
+        PlayerRespawn = new Vector2(-32.3f, 2.2f);
+        StartCoroutine(GoTo3_1(false));
     }
     public void PlayEvent(int eventNum) {
         if(eventNum == 1) {
@@ -340,6 +395,30 @@ public class Manager : MonoBehaviour {
         else if(eventNum == 4) {
             GoToLevel2();
         }
+        else if(eventNum == 21) {
+            GameStats.Green = true;
+        }
+        else if(eventNum == 22) {
+            SecurityOfficeDoor();
+        }
+        else if(eventNum == 23) {
+            GameStats.Blue = true;
+        }
+        else if(eventNum == 24) {
+            GoToLevel3_1From2();
+        }
+        else if(eventNum == 20) {
+            GameStats.KnowsBlue = true;
+        }
+        else if(eventNum == 30) {
+            GoToLevel2From3_1();
+        } 
+        else if(eventNum == 31) {
+            HeadOfSecurity.SetActive(false);
+        }
+        else if(eventNum == 40) {
+            GoToLevel3_1From3_2();
+        }
         else if(eventNum == 90) {
             ResetLevel1();
         }
@@ -353,15 +432,32 @@ public class Manager : MonoBehaviour {
         FadeAnimator.SetBool("Fade", false);
     }
 
-    IEnumerator GoTo2() {
+    IEnumerator GoTo2(bool wanna) {
         yield return new WaitForSeconds(1.0f);
         Level1.SetActive(false);
         Level2.SetActive(true);
+        Level3_1.SetActive(false);
+        Level3_2.SetActive(true);
         Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
         WhereToGo.Stop();
-        Announcement(1);
+        if(wanna)
+            Announcement(1);
     }
+
+    IEnumerator GoTo3_1(bool wanna) {
+        yield return new WaitForSeconds(1.0f);
+        Level1.SetActive(false);
+        Level2.SetActive(false);
+        Level3_1.SetActive(true);
+        Level3_2.SetActive(false);
+        Player.transform.position = PlayerRespawn;
+        FadeAnimator.SetBool("Fade", false);
+        WhereToGo.Stop();
+        if(wanna)
+            Announcement(2);
+    }
+
     IEnumerator MakeBadGuyLeave1() {
         yield return new WaitForSeconds(1.0f);
         TheBadMan.SetActive(false);
@@ -377,5 +473,30 @@ public class Manager : MonoBehaviour {
         Level2.SetActive(false);
         Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
+    }
+
+    public void specialInstanceCheck() {
+        if (currentInteractable.Type == 10)
+        {
+            if (GameStats.Green) {
+                StartDialogue(currentInteractable, 1);
+            }
+            else {
+                StartDialogue(currentInteractable, 0);
+            }
+        } else if(currentInteractable.Type == 11) {
+            if(GameStats.Blue) {
+                StartDialogue(currentInteractable, 2);
+            } else if(GameStats.KnowsBlue) {
+                StartDialogue(currentInteractable, 1);
+            }
+            else {
+                StartDialogue(currentInteractable, 0);
+            }
+        }
+        else
+        {
+            StartDialogue(currentInteractable);
+        }
     }
 }
