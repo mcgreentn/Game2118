@@ -33,25 +33,33 @@ public class Interactable : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter2D(Collision2D other) 
-    {
-        M.ShowInteractionPane(name, interactPrompt, this);
+	//void OnCollisionEnter2D(Collision2D other) 
+ //   {
+ //       M.ShowInteractionPane(name, interactPrompt, this);
 
-	}
+	//}
+	//void OnCollisionStay2D(Collision2D collision)
+	//{
+ //       if(M.interacting == 0 && M.talking == 0)
+ //           M.ShowInteractionPane(name, interactPrompt, this);
+	//}
+	//void OnCollisionExit2D(Collision2D collision)
+	//{
+ //       M.HideInteractionPane();
+ //       interacting = 0;
+	//}
 
-	void OnCollisionExit2D(Collision2D collision)
-	{
-        M.HideInteractionPane();
-        interacting = 0;
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
+	void OnTriggerEnter2D(Collider2D collision)
 	{
         M.ShowInteractionPane(name, interactPrompt, this);
         interacting = 1;
 	}
-
-	private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (M.interacting == 0 && M.talking == 0)
+            M.ShowInteractionPane(name, interactPrompt, this);
+    }
+	void OnTriggerExit2D(Collider2D collision)
 	{
         M.HideInteractionPane();
 	}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 public class Manager : MonoBehaviour {
 
     /// <summary>
@@ -50,6 +51,7 @@ public class Manager : MonoBehaviour {
     public GameObject ExtraGuard;
 
     public GameObject HeadOfSecurity;
+    public GameObject Guards;
 
     // Security Door
     public Animator SecurityDoor;
@@ -59,10 +61,14 @@ public class Manager : MonoBehaviour {
     public GameObject Level2;
     public GameObject Level3_1;
     public GameObject Level3_2;
+
+
+    public GameObject Theater;
 	private void Start()
 	{
         entities = new Queue<Entity>();
-        //Level1_0();
+        //PlayMovie();
+        Level1_0();
         //GoToLevel2();
         //GoToLevel3_1From2();
         //sentences = new Queue<string>();
@@ -87,6 +93,12 @@ public class Manager : MonoBehaviour {
             StartInvestigate(currentInteractable);
         }
 	}
+
+    public void PlayMovie() {
+        Theater.SetActive(true);
+    }
+
+
     public void ShowInteractionPane(string name, string text, Interactable me) {
         
         currentInteractable = me;
@@ -121,6 +133,8 @@ public class Manager : MonoBehaviour {
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
+        talking = 1;
+        interacting = 0;
         StartCoroutine(TalkingToRoutine());
         Debug.Log("[Begin conversation with " + me.name + "]");
 
@@ -146,7 +160,9 @@ public class Manager : MonoBehaviour {
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
-        StartCoroutine(TalkingToRoutine());
+        talking = 1;
+        interacting = 0;
+        //StartCoroutine(TalkingToRoutine());
         Debug.Log("[Begin conversation with " + me.name + "]");
 
         entities.Clear();
@@ -170,7 +186,9 @@ public class Manager : MonoBehaviour {
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
-        StartCoroutine(TalkingToRoutine());
+        //StartCoroutine(TalkingToRoutine());
+        talking = 1;
+        interacting = 0;
         Debug.Log("[Begin conversation with " + me.name + "]");
 
         entities.Clear();
@@ -195,7 +213,9 @@ public class Manager : MonoBehaviour {
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
-        StartCoroutine(TalkingToRoutine());
+        //StartCoroutine(TalkingToRoutine());
+        talking = 1;
+        interacting = 0;
         Debug.Log("[Begin investigate with " + me.name + "]");
 
         foreach (Entity entity in me.investigates[0].entities)
@@ -353,7 +373,14 @@ public class Manager : MonoBehaviour {
         }
     }
 
-
+    public void MakeHOSLeave1() {
+        FadeAnimator.SetBool("Fade", true);
+        StartCoroutine(MakeHOSLeave());
+    }
+    public void MakeGuardsLeave1() {
+        FadeAnimator.SetBool("Fade", true);
+        StartCoroutine(MakeGuardsLeave());
+    }
     public void GoToElevator() {
         FadeAnimator.SetBool("Fade", true);
         //PlayerRespawn =
@@ -414,7 +441,13 @@ public class Manager : MonoBehaviour {
             GoToLevel2From3_1();
         } 
         else if(eventNum == 31) {
-            HeadOfSecurity.SetActive(false);
+            MakeHOSLeave1();
+        }
+        else if(eventNum == 34) {
+            MakeGuardsLeave1();
+        }
+        else if(eventNum == 38) {
+            GameStats.ExtraEvidence1 = true;
         }
         else if(eventNum == 40) {
             GoToLevel3_1From3_2();
@@ -467,6 +500,18 @@ public class Manager : MonoBehaviour {
 
     }
 
+    IEnumerator MakeHOSLeave() {
+        yield return new WaitForSeconds(1.0f);
+        HeadOfSecurity.SetActive(false);
+        FadeAnimator.SetBool("Fade", false);
+    }
+
+    IEnumerator MakeGuardsLeave() {
+        yield return new WaitForSeconds(1.0f);
+        Guards.SetActive(false);
+        FadeAnimator.SetBool("Fade", false);
+    }
+
     IEnumerator GoToElev() {
         yield return new WaitForSeconds(1.0f);
         Level1.SetActive(false);
@@ -498,5 +543,29 @@ public class Manager : MonoBehaviour {
         {
             StartDialogue(currentInteractable);
         }
+    }
+
+    void PlayMyClip()
+    {
+        if (!Theater.GetComponent<VideoPlayer>().isPlaying)
+        {
+            GameStats.CanMove = false;
+            // Play clip
+            Theater.GetComponent<VideoPlayer>().Play();
+            // Wait for the clip to finish
+            StartCoroutine(Wait(72f));
+
+            //
+            // Add your code here
+            //
+
+        }
+
+    }
+    private IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Level1_0();
+        GameStats.CanMove = true;
     }
 }

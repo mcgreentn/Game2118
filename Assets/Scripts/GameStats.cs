@@ -21,4 +21,6 @@ public class GameStats {
     public static bool Red;
 
     public static bool KnowsBlue;
+
+    public static bool ExtraEvidence1;
 }
