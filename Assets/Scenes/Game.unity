@@ -713,6 +713,124 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &52546870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 52546871}
+  - component: {fileID: 52546873}
+  - component: {fileID: 52546872}
+  m_Layer: 0
+  m_Name: Fourth Cage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &52546871
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52546870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.999995, y: 0.999995, z: 0.999995}
+  m_Children: []
+  m_Father: {fileID: 1139494122}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -44.19, y: 65.69}
+  m_SizeDelta: {x: 12.42, y: 7.53}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &52546872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52546870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0894b3adf414044209ea5bd75f0558b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    entities:
+    - name: Sophie
+      sentence: 'I can just barely make out a dark shape in the cage in front of me.
+
+        *Suddenly Sophie hears a voice directly in her mind*'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Voice
+      sentence: <Hello, Zoe>
+      image: {fileID: 0}
+      eventNum: 0
+    - name: Sophie
+      sentence: What?! What is this?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 39
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+    - name: 
+      sentence: 
+      image: {fileID: 0}
+      eventNum: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+--- !u!61 &52546873
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52546870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.0945287, y: -4.8575397}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.393367, y: 10.715079}
+  m_EdgeRadius: 0
 --- !u!114 &71982218 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114330935092352796, guid: fa346658a9f154012a8c2bd4ea4da666,
@@ -2729,7 +2847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &473295276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3077,12 +3195,12 @@ Prefab:
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -3.24
+      value: 18.02
       objectReference: {fileID: 0}
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -6.75
+      value: -7.67
       objectReference: {fileID: 0}
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
@@ -4030,7 +4148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Narrator
+    - name: Cage
       sentence: There's nothing in this cage except for some spare gears and gizmos.
         Whatever used to be here, it isn't here anymore...
       image: {fileID: 0}
@@ -5461,7 +5579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1139494122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5488,12 +5606,13 @@ RectTransform:
   - {fileID: 1343925054}
   - {fileID: 727905845}
   - {fileID: 1146878394}
+  - {fileID: 52546871}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.7, y: -18.7}
+  m_AnchoredPosition: {x: -2.360714, y: -19.473068}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1144037668
@@ -5655,7 +5774,7 @@ GameObject:
   - component: {fileID: 1146878396}
   - component: {fileID: 1146878395}
   m_Layer: 0
-  m_Name: Fourth Cage
+  m_Name: Fourth Computer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5676,7 +5795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.45, y: 65.84}
+  m_AnchoredPosition: {x: -34.03, y: 66.7}
   m_SizeDelta: {x: 12.42, y: 7.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146878395
@@ -5692,15 +5811,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Narrator
-      sentence: There's nothing in this cage except for some spare gears and gizmos.
-        Whatever used to be here, it isn't here anymore...
+    - name: Computer
+      sentence: 'Subject: Sentient AI 1 (SAI1)
+
+        Sentience Test: Passed
+
+        Pain Receptors: Disabled
+
+        Turing Test: Passed'
+      image: {fileID: 0}
+      eventNum: 0
+    - name: Computer
+      sentence: 'Compliance Routine: --MISSING--
+
+        Notes: ATTN: Use caution with this subject - its programming is very powerful,
+        and has become corrupted by some sub-routine. Until a patch can be installed,
+        do not interact or communicate with the subject. '
       image: {fileID: 0}
       eventNum: 0
   investigates:
   - entities:
     - name: Sophie
-      sentence: 'It is far beyond my abilities to try and disable this security system. '
+      sentence: "The vitals on this display appear to be different than the others
+        - while they resembled a human\u2019s biometrics, this biometric set appears
+        to be very different, moving at a faster pace. "
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
     - name: 
@@ -5727,7 +5861,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.2996264, y: -2.7307448}
+  m_Offset: {x: 3.3417573, y: -3.916613}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5738,7 +5872,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.803562, y: 6.4614897}
+  m_Size: {x: 3.1010103, y: 8.833226}
   m_EdgeRadius: 0
 --- !u!1 &1175459541
 GameObject:
@@ -6059,6 +6193,11 @@ Prefab:
       propertyPath: Theater
       value: 
       objectReference: {fileID: 1580397023}
+    - target: {fileID: 114968654364574092, guid: 8666255cb3fd345d9aef53e08df9f1d3,
+        type: 2}
+      propertyPath: Jenkins
+      value: 
+      objectReference: {fileID: 394382890}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8666255cb3fd345d9aef53e08df9f1d3, type: 2}
   m_IsPrefabParent: 0
@@ -6131,11 +6270,11 @@ MonoBehaviour:
     - name: Mark
       sentence: We better take care of that, right now!
       image: {fileID: 0}
-      eventNum: 0
+      eventNum: 34
     - name: Sophie
       sentence: That was pretty good for a dumb trick. Now I can go on ahead!
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 34
+      eventNum: 0
   investigates:
   - entities:
     - name: Sophie
@@ -6161,7 +6300,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.5476918, y: -1.3522003}
@@ -6912,8 +7051,8 @@ MonoBehaviour:
   counter: 0
   image: {fileID: 0}
   talking: 0
-  interacting: 1
-  Type: 0
+  interacting: 0
+  Type: 1
   interactPrompt: 
 --- !u!1 &1473092314
 GameObject:
@@ -7828,6 +7967,8 @@ GameObject:
   - component: {fileID: 1658169646}
   - component: {fileID: 1658169645}
   - component: {fileID: 1658169647}
+  - component: {fileID: 1658169648}
+  - component: {fileID: 1658169649}
   m_Layer: 0
   m_Name: Papers
   m_TagString: Untagged
@@ -7943,9 +8084,59 @@ MonoBehaviour:
   counter: 0
   image: {fileID: 0}
   talking: 0
-  interacting: 1
-  Type: 0
+  interacting: 0
+  Type: 1
   interactPrompt: 
+--- !u!61 &1658169648
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658169643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.350037, y: -1.8237374}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.700074, y: 4.647475}
+  m_EdgeRadius: 0
+--- !u!61 &1658169649
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658169643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.367612, y: 2.635518}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.7417917, y: 3.7982016}
+  m_EdgeRadius: 0
 --- !u!1 &1724576969
 GameObject:
   m_ObjectHideFlags: 0
@@ -9412,8 +9603,8 @@ MonoBehaviour:
   counter: 0
   image: {fileID: 0}
   talking: 0
-  interacting: 1
-  Type: 0
+  interacting: 0
+  Type: 1
   interactPrompt: 
 --- !u!1 &1853354742
 GameObject:

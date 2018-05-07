@@ -12,7 +12,8 @@ public class Guard : MonoBehaviour
     public int talking = 0;
     public int interacting = 0;
 
-
+    public int type;
+    public int triggered;
 	// Use this for initialization
 	void Start()
 	{
@@ -29,10 +30,12 @@ public class Guard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!GameStats.IsStealthed)
+        if (!GameStats.IsStealthed || (type == 1 && triggered == 0))
         {
             M.StartDialogue(this);
+            triggered = 1;
         }
+
     }
 
 	//private void OnCollisionEnter2D(Collision2D collision)

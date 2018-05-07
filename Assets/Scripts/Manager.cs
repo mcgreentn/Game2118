@@ -52,6 +52,7 @@ public class Manager : MonoBehaviour {
 
     public GameObject HeadOfSecurity;
     public GameObject Guards;
+    public GameObject Jenkins;
 
     // Security Door
     public Animator SecurityDoor;
@@ -68,9 +69,9 @@ public class Manager : MonoBehaviour {
 	{
         entities = new Queue<Entity>();
         //PlayMovie();
-        Level1_0();
+        //Level1_0();
         //GoToLevel2();
-        //GoToLevel3_1From2();
+        GoToLevel3_1From2();
         //sentences = new Queue<string>();
 	}
 	void Update()
@@ -79,10 +80,13 @@ public class Manager : MonoBehaviour {
         {
             if (GameStats.IsStealthed && (currentInteractable.Type < 1))
             {
+                eventNum = 0;
                 StartEvesdropping(currentInteractable);
+
             } 
             else
             {
+                eventNum = 0;
                 specialInstanceCheck();
             }
         }
@@ -90,6 +94,7 @@ public class Manager : MonoBehaviour {
         {
             DisplayNextSentence();
         }else if(Input.GetKeyDown(KeyCode.F) && interacting == 1) {
+            eventNum = 0;
             StartInvestigate(currentInteractable);
         }
 	}
@@ -271,10 +276,18 @@ public class Manager : MonoBehaviour {
     }
 
     public void DisplayNextSentence() {
+        if (eventNum != 0)
+        {
+            PlayEvent(eventNum);
+        }
         if(entities.Count == 0) {
             EndDialogue();
             return;
+        } else {
+
         }
+
+
 
         Entity entity = entities.Dequeue();
         eventNum = entity.eventNum;
@@ -297,6 +310,7 @@ public class Manager : MonoBehaviour {
         Typing = StartCoroutine(TypeSentence(sentence));
         Debug.Log(sentence);
 
+
     }
 
     void EndDialogue() {
@@ -305,10 +319,11 @@ public class Manager : MonoBehaviour {
         currentInteractable = null;
         HideDialoguePane();
         Debug.Log("[Ending dialogue]");
-        if (eventNum != 0)
-        {
-            PlayEvent(eventNum);
-        }
+
+        //if (eventNum != 0)
+        //{
+        //    PlayEvent(eventNum);
+        //}
     }
 
 
@@ -400,7 +415,7 @@ public class Manager : MonoBehaviour {
 
     public void GoToLevel3_1From2() {
         FadeAnimator.SetBool("Fade", true);
-        PlayerRespawn = new Vector2(-3.1f, -6.7f);
+        PlayerRespawn = new Vector2(18f, -7.67f);
         StartCoroutine(GoTo3_1(true));
     }
 
@@ -448,6 +463,10 @@ public class Manager : MonoBehaviour {
         }
         else if(eventNum == 38) {
             GameStats.ExtraEvidence1 = true;
+        }
+        else if(eventNum == 39) {
+            Debug.Log("Here");
+            StartCoroutine(JenkinsEntrance());
         }
         else if(eventNum == 40) {
             GoToLevel3_1From3_2();
@@ -520,6 +539,13 @@ public class Manager : MonoBehaviour {
         FadeAnimator.SetBool("Fade", false);
     }
 
+    IEnumerator JenkinsEntrance() {
+        FadeAnimator.SetBool("Fade", true);
+        yield return new WaitForSeconds(1.0f);
+        Jenkins.transform.position = new Vector2(-15f, 1.56f);
+        FadeAnimator.SetBool("Fade", false);
+    }
+
     public void specialInstanceCheck() {
         if (currentInteractable.Type == 10)
         {
@@ -562,6 +588,7 @@ public class Manager : MonoBehaviour {
         }
 
     }
+
     private IEnumerator Wait(float duration)
     {
         yield return new WaitForSeconds(duration);
