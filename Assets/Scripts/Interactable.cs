@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour {
 		colliderbox = this.gameObject.GetComponent<BoxCollider2D> ();
         M = GameObject.FindWithTag("GameController").GetComponent<Manager>();
         if(interactPrompt.Equals("")) {
-            interactPrompt = "Press space to interact. Press F to ponder.";
+            interactPrompt = "Press space to interact. Press F to investigate.";
         }
 	}
 

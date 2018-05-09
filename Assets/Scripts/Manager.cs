@@ -62,6 +62,8 @@ public class Manager : MonoBehaviour {
     public GameObject Level2;
     public GameObject Level3_1;
     public GameObject Level3_2;
+    public GameObject Level4;
+
 
 
     public GameObject Theater;
@@ -69,9 +71,9 @@ public class Manager : MonoBehaviour {
 	{
         entities = new Queue<Entity>();
         //PlayMovie();
-        //Level1_0();
+        Level1_0();
         //GoToLevel2();
-        GoToLevel3_1From2();
+        //GoToLevel3_1From2();
         //sentences = new Queue<string>();
 	}
 	void Update()
@@ -101,6 +103,7 @@ public class Manager : MonoBehaviour {
 
     public void PlayMovie() {
         Theater.SetActive(true);
+        PlayMyClip();
     }
 
 
@@ -258,6 +261,7 @@ public class Manager : MonoBehaviour {
     }
 
     public void StartDialogue(Guard me) {
+        eventNum = 0;
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
@@ -348,21 +352,26 @@ public class Manager : MonoBehaviour {
     }
 
     public void Level1_0() {
+        Level1.SetActive(true);
+        WhereToGo.transform.position = new Vector2(-7.5f, -8f);
         PlayerRespawn = new Vector2(-3.5f, -7.5f);
         Announcement(0);
     }
 
     public void Level1_1() {
-        WhereToGo.gameObject.transform.localPosition = new Vector2(175f, 292f);
+        WhereToGo.gameObject.transform.position = new Vector2(-0.86f, -1.65f);
         WhereToGo.Play();
     }
 
     public void Level1_2() {
-        WhereToGo.gameObject.transform.localPosition = new Vector2(-176f, -294f);
+        WhereToGo.gameObject.transform.position = new Vector2(-3.08f, 3.3f);
         WhereToGo.Play();
+        FadeAnimator.SetBool("Fade", true);
+        StartCoroutine(MakeBadGuyLeave1());
+        PlayerRespawn = new Vector2(-1.0f, -1.0f);
     }
     public void Level1_3() {
-        WhereToGo.gameObject.transform.localPosition = new Vector2(-178f, -289f);
+        WhereToGo.gameObject.transform.position = new Vector2(-178f, 100f);
         WhereToGo.Play();
         // fade to black briefly
         FadeAnimator.SetBool("Fade", true);
@@ -424,59 +433,104 @@ public class Manager : MonoBehaviour {
         PlayerRespawn = new Vector2(-32.3f, 2.2f);
         StartCoroutine(GoTo3_1(false));
     }
+
+    public void Level3Drive() {
+        WhereToGo.transform.position = new Vector2(-14.72f, 2.52f);
+        WhereToGo.Play();
+    }
+
+    public void Level3Elevator() {
+        WhereToGo.transform.position = new Vector2(-11.04f, 2.21f);
+        WhereToGo.Play();
+    }
     public void PlayEvent(int eventNum) {
-        if(eventNum == 1) {
+        if (eventNum == 1)
+        {
             Level1_1();
         }
-        else if(eventNum == 2) {
+        else if (eventNum == 2)
+        {
             Level1_2();
         }
-        else if(eventNum == 3) {
+        else if (eventNum == 3)
+        {
             Level1_3();
         }
-        else if(eventNum == 4) {
+        else if (eventNum == 4)
+        {
             GoToLevel2();
         }
-        else if(eventNum == 21) {
+        else if (eventNum == 21)
+        {
             GameStats.Green = true;
         }
-        else if(eventNum == 22) {
+        else if (eventNum == 22)
+        {
             SecurityOfficeDoor();
         }
-        else if(eventNum == 23) {
+        else if (eventNum == 23)
+        {
             GameStats.Blue = true;
         }
-        else if(eventNum == 24) {
+        else if (eventNum == 24)
+        {
             GoToLevel3_1From2();
         }
-        else if(eventNum == 20) {
+        else if (eventNum == 20)
+        {
             GameStats.KnowsBlue = true;
         }
-        else if(eventNum == 30) {
+        else if (eventNum == 30)
+        {
             GoToLevel2From3_1();
-        } 
-        else if(eventNum == 31) {
+        }
+        else if (eventNum == 31)
+        {
             MakeHOSLeave1();
         }
-        else if(eventNum == 34) {
+        else if (eventNum == 34)
+        {
             MakeGuardsLeave1();
         }
-        else if(eventNum == 38) {
+        else if (eventNum == 38)
+        {
             GameStats.ExtraEvidence1 = true;
         }
-        else if(eventNum == 39) {
+        else if (eventNum == 39)
+        {
             Debug.Log("Here");
             StartCoroutine(JenkinsEntrance());
         }
-        else if(eventNum == 40) {
+        else if (eventNum == 40)
+        {
             GoToLevel3_1From3_2();
+        }
+        else if (eventNum == 50)
+        {
+            Level3Drive();
+        }
+        else if(eventNum == 52) {
+            Level3Elevator();   
+        }
+        else if (eventNum == 55) {
+            // move to level 4
         }
         else if(eventNum == 90) {
             ResetLevel1();
         }
     }
 
-
+    IEnumerator GoTo4() {
+        FadeAnimator.SetBool("Fade", true);
+        yield return new WaitForSeconds(1.0f);
+        Level1.SetActive(false);
+        Level2.SetActive(false);
+        Level3_1.SetActive(false);
+        Level3_2.SetActive(false);
+        Level4.SetActive(true);
+        FadeAnimator.SetBool("Fade", false);
+        Announcement(3);
+    }
     IEnumerator Reset1() {
         yield return new WaitForSeconds(1.0f);
         Player.transform.position = PlayerRespawn;
@@ -490,6 +544,7 @@ public class Manager : MonoBehaviour {
         Level2.SetActive(true);
         Level3_1.SetActive(false);
         Level3_2.SetActive(true);
+        Level4.SetActive(false);
         Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
         WhereToGo.Stop();
@@ -503,6 +558,7 @@ public class Manager : MonoBehaviour {
         Level2.SetActive(false);
         Level3_1.SetActive(true);
         Level3_2.SetActive(false);
+        Level4.SetActive(false);
         Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
         WhereToGo.Stop();
@@ -543,6 +599,7 @@ public class Manager : MonoBehaviour {
         FadeAnimator.SetBool("Fade", true);
         yield return new WaitForSeconds(1.0f);
         Jenkins.transform.position = new Vector2(-15f, 1.56f);
+        Jenkins.GetComponent<Guard>().enabled = false;
         FadeAnimator.SetBool("Fade", false);
     }
 
@@ -562,6 +619,12 @@ public class Manager : MonoBehaviour {
                 StartDialogue(currentInteractable, 1);
             }
             else {
+                StartDialogue(currentInteractable, 0);
+            }
+        } else if(currentInteractable.Type == 12) {
+            if(GameStats.HasDrive) {
+                StartDialogue(currentInteractable, 1);
+            } else {
                 StartDialogue(currentInteractable, 0);
             }
         }
@@ -584,7 +647,6 @@ public class Manager : MonoBehaviour {
             //
             // Add your code here
             //
-
         }
 
     }
@@ -594,5 +656,7 @@ public class Manager : MonoBehaviour {
         yield return new WaitForSeconds(duration);
         Level1_0();
         GameStats.CanMove = true;
+        Theater.SetActive(false);
+
     }
 }

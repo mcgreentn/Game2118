@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7eb437e729dc24058aaa534aabd121ee
-timeCreated: 1525227291
+timeCreated: 1525888966
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,7 +18,7 @@ TextureImporter:
     21300022: tiny_galaxy_portraits_11
     21300024: tiny_galaxy_portraits_12
     21300026: tiny_galaxy_portraits_13
-    21300028: tiny_galaxy_portraits_14
+    21300028: Tucker
     21300030: tiny_galaxy_portraits_15
     21300032: tiny_galaxy_portraits_16
     21300034: tiny_galaxy_portraits_17
@@ -37,8 +37,8 @@ TextureImporter:
     21300060: tiny_galaxy_portraits_30
     21300062: tiny_galaxy_portraits_31
     21300064: tiny_galaxy_portraits_32
-    21300066: Sophie
-    21300068: tiny_galaxy_portraits_34
+    21300066: Zoe
+    21300068: Mark
     21300070: tiny_galaxy_portraits_35
     21300072: tiny_galaxy_portraits_36
     21300074: tiny_galaxy_portraits_37
@@ -82,7 +82,7 @@ TextureImporter:
     21300150: tiny_galaxy_portraits_75
     21300152: tiny_galaxy_portraits_76
     21300154: tiny_galaxy_portraits_77
-    21300156: tiny_galaxy_portraits_78
+    21300156: SAI
     21300158: tiny_galaxy_portraits_79
     21300160: henchperson
     21300162: tiny_galaxy_portraits_81
@@ -131,7 +131,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -406,7 +406,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tiny_galaxy_portraits_14
+      name: Tucker
       rect:
         serializedVersion: 2
         x: 128
@@ -672,7 +672,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sophie
+      name: Zoe
       rect:
         serializedVersion: 2
         x: 96
@@ -686,7 +686,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tiny_galaxy_portraits_34
+      name: Mark
       rect:
         serializedVersion: 2
         x: 128
@@ -1302,7 +1302,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tiny_galaxy_portraits_78
+      name: SAI
       rect:
         serializedVersion: 2
         x: 256

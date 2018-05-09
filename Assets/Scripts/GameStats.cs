@@ -23,4 +23,6 @@ public class GameStats {
     public static bool KnowsBlue;
 
     public static bool ExtraEvidence1;
+
+    public static bool HasDrive;
 }
