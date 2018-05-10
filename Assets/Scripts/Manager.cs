@@ -66,6 +66,8 @@ public class Manager : MonoBehaviour {
     public GameObject Level4;
 
 
+    public AudioSource SoundMan;
+    public AudioClip[] Clips;
 
     public GameObject Theater;
 	private void Start()
@@ -105,6 +107,11 @@ public class Manager : MonoBehaviour {
 
     public void PlayMovie() {
         Theater.SetActive(true);
+        Level1.SetActive(false);
+        Level2.SetActive(false);
+        Level3_1.SetActive(false);
+        Level3_2.SetActive(false);
+        Level4.SetActive(false);
         PlayMyClip();
     }
 
@@ -165,8 +172,26 @@ public class Manager : MonoBehaviour {
         }
     }
 
+    public void PlaySound(Interactable me) {
+        GameObject obj = me.gameObject;
+        AudioSource clip = obj.GetComponent<AudioSource>();
+        if(clip != null) {
+            clip.Play();
+        }
+    }
+
+    public void PlaySound(Guard me) {
+        GameObject obj = me.gameObject;
+        AudioSource clip = obj.GetComponent<AudioSource>();
+        if (clip != null)
+        {
+            clip.Play();
+        }
+    }
     public void StartDialogue(Interactable me, int count)
     {
+        
+
         GameStats.CanMove = false;
         ShowDialoguePane();
         HideInteractionPane();
@@ -235,11 +260,11 @@ public class Manager : MonoBehaviour {
 
         Debug.Log("Investigates size: " + entities.Count);
         DisplayNextSentence();
-        if (me.Type == 2)
-        {
-            // collect this object
-            me.Collect();
-        }
+        //if (me.Type == 2)
+        //{
+        //    // collect this object
+        //    me.Collect();
+        //}
 
     }
 
@@ -263,6 +288,7 @@ public class Manager : MonoBehaviour {
     }
 
     public void StartDialogue(Guard me) {
+        PlaySound(me);
         eventNum = 0;
         GameStats.CanMove = false;
         ShowDialoguePane();
@@ -355,6 +381,11 @@ public class Manager : MonoBehaviour {
 
     public void Level1_0() {
         Level1.SetActive(true);
+        Level2.SetActive(false);
+        Theater.SetActive(false);
+        Level3_1.SetActive(false);
+        Level3_2.SetActive(false);
+        Level4.SetActive(false);
         WhereToGo.transform.position = new Vector2(-7.5f, -8f);
         PlayerRespawn = new Vector2(-3.5f, -7.5f);
         Announcement(0);
@@ -468,6 +499,8 @@ public class Manager : MonoBehaviour {
         else if (eventNum == 21)
         {
             GameStats.Green = true;
+            SoundMan.clip = Clips[3];
+            SoundMan.Play();
         }
         else if (eventNum == 22)
         {
@@ -476,10 +509,16 @@ public class Manager : MonoBehaviour {
         else if (eventNum == 23)
         {
             GameStats.Blue = true;
+            SoundMan.clip = Clips[3];
+            SoundMan.Play();
         }
         else if (eventNum == 24)
         {
             GoToLevel3_1From2();
+        }
+        else if(eventNum == 25) {
+            SoundMan.clip = Clips[1];
+            SoundMan.Play();
         }
         else if (eventNum == 20)
         {
@@ -497,9 +536,15 @@ public class Manager : MonoBehaviour {
         {
             MakeGuardsLeave1();
         }
+        else if(eventNum == 37) {
+            SoundMan.clip = Clips[2];
+            SoundMan.Play();
+        }
         else if (eventNum == 38)
         {
             GameStats.ExtraEvidence1 = true;
+            SoundMan.clip = Clips[1];
+            SoundMan.Play();
         }
         else if (eventNum == 39)
         {
@@ -519,6 +564,11 @@ public class Manager : MonoBehaviour {
         }
         else if (eventNum == 55) {
             // move to level 4
+            GoToLevel4();
+        }
+        else if(eventNum == 56) {
+            SoundMan.clip = Clips[4];
+            SoundMan.Play();
         }
         else if(eventNum == 90) {
             ResetLevel1();
@@ -630,6 +680,8 @@ public class Manager : MonoBehaviour {
     }
 
     public void specialInstanceCheck() {
+        // play a sound if one exists
+        PlaySound(currentInteractable);
         if (currentInteractable.Type == 10)
         {
             if (GameStats.Green) {

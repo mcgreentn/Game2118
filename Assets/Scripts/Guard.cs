@@ -37,13 +37,21 @@ public class Guard : MonoBehaviour
         }
 
     }
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+        if (!GameStats.IsStealthed || (type == 1 && triggered == 0))
+        {
+            M.StartDialogue(this);
+            triggered = 1;
+        }
+	}
 
 	//private void OnCollisionEnter2D(Collision2D collision)
 	//{
- //       if (!GameStats.IsStealthed)
- //       {
- //           M.StartDialogue(this);
- //       }
+	//       if (!GameStats.IsStealthed)
+	//       {
+	//           M.StartDialogue(this);
+	//       }
 	//}
 
 

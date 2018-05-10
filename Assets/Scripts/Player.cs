@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     public Sprite[] playerImage;
     // Stealth Animator
     public Animator StealthAnimator;
+
+
+    public AudioSource StealthSound;
     // Use this for initialization
     void Start()
     {
@@ -106,6 +109,7 @@ public class Player : MonoBehaviour
         GameStats.IsStealthed = true;
         MakeTransparent(180f);
         StealthAnimator.SetBool("Stealthed", true);
+        StealthSound.Play();
     }
 
     public void StealthOff()
@@ -114,5 +118,6 @@ public class Player : MonoBehaviour
         GameStats.IsStealthed = false;
         MakeTransparent(255f);
         StealthAnimator.SetBool("Stealthed", false);
+        StealthSound.Play();
     }
 }
