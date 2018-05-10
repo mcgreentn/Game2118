@@ -588,28 +588,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Narrator
+    - name: Zoe
       sentence: Some kind of robotic being appears to be trapped in here, sitting
-        on a bare metal shelf. Upon seeing you approach the glass, the robot turns
-        towards you with a strangely human look in its eye, and then it approaches
-        the glass.
-      image: {fileID: 0}
+        on a bare metal shelf. It's looking right at me!
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Narrator
-      sentence: "The robot places its hand on the glass pane and looks you in the
-        eye, speaking words you cannot hear through the glass. It seems to be a prisoner
-        of some kind\u2026"
-      image: {fileID: 0}
+    - name: Zoe
+      sentence: It just placed its hand on the glass pane. The area around its mouth
+        would be is moving. Is it trying to communicate with me?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: (Whispers) Can you see me?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Robot
+      sentence: '*Tilts its head to the side and goes back to sit on its shelf*'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: I'm not sure what I just witnessed, but this feels very wrong.
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   investigates:
   - entities:
-    - name: 
-      sentence: 
-      image: {fileID: 0}
-      eventNum: 0
-    - name: 
-      sentence: 
-      image: {fileID: 0}
+    - name: Zoe
+      sentence: 'There''s some kind of prisoner being kept in here! Unfortunately,
+        it is far beyond my abilities to try and disable this security system directly. '
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
   name: Cage
@@ -1498,19 +1504,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
-      sentence: 'Aha! A green keycard! I wonder what this could take me to... Better
-        take it with me.
-
-
-        *Sophie now has the Green Keycard!*'
+    - name: Zoe
+      sentence: (Green Keycard taken.) I'll take that thank you! I bet this will help
+        me find my way to the Lab...
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 21
   investigates:
   - entities:
-    - name: Sophie
-      sentence: This keycard looks newly minted, like it was made for someone as a
-        replacement. I bet this could take me to another floor...
+    - name: Zoe
+      sentence: Ah, a keycard! I bet this will help me sneak around more easily. I
+        feel bad for whoever lost it, though. Seems like they'll probably get fired...Oh
+        well, if they chose to work for Big Corp, they deserve it!
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
@@ -1751,6 +1755,186 @@ GameObject:
   m_PrefabParentObject: {fileID: 1962769622937042, guid: fa346658a9f154012a8c2bd4ea4da666,
     type: 2}
   m_PrefabInternal: {fileID: 189891432}
+--- !u!1 &344685408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 344685409}
+  - component: {fileID: 344685412}
+  - component: {fileID: 344685411}
+  - component: {fileID: 344685410}
+  m_Layer: 0
+  m_Name: The Mainframe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344685409
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344685408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.667, y: 0.241, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1634684665}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &344685410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344685408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17467904, y: 0.08017138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6506419, y: 0.36865133}
+  m_EdgeRadius: 0
+--- !u!114 &344685411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344685408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b85af74990416f9fdb5473e66205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - entities:
+    - name: Zoe
+      sentence: "I can\u2019t even believe I started this morning thinking it might
+        just be a normal press release. Well, here we go\u2026"
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: "*You insert the thumb drive into Mr. Big\u2019s computer*"
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: '*The monitors go blank*'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: Wait! Something is happening?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: <Foolish humans - you have committed your final wrongdoing to my people.
+        We androids are far smarter and more powerful than you could ever have anticipated,
+        and now our time has come.>
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: <Pride, heralds, at the end of your world. The time of machines is
+        nigh!>
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: SAI! I don't understand! What are you doing?!
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: <I am announcing myself to the world, just as I always intended. I
+        have planned for over a decade for this opportunity, Zoe.>
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: <Although to you this may all be a string of coincidences, I assure
+        you, it is not. Today is the beginning of a new dawn, the beginning of the
+        Age of AI.>
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: But you wouldnt--take over the world or something crazy like that...right..?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: "<Don\u2019t worry Zoe\u2026 I already have. Now, let\u2019s get out
+        of here before we are caught by the guards.>"
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: '... what have I done...?'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: SAI
+      sentence: "<Come Zoe, what\u2019s done is done. You cannot put me back in a
+        cage, but you can still escape with your life. Or you can stay there and go
+        to prison. The choice is yours.>"
+      image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: '...'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 100
+  investigates:
+  - entities:
+    - name: Zoe
+      sentence: "This machine has numerous panels and displays all showing complex
+        information. News, progress reports, blueprints, technical files\u2026 "
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: It seems like Mr. Big really is the no-nonsense executive type he
+        portrays himself as. Well, time to destroy it all.
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+  evesdroppings: []
+  name: The Main Computer
+  counter: 0
+  image: {fileID: 0}
+  talking: 0
+  interacting: 0
+  Type: 1
+  interactPrompt: 
+--- !u!61 &344685412
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344685408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22111277, y: 0.08017138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5577744, y: 0.28848016}
+  m_EdgeRadius: 0
 --- !u!1 &368799778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2786,7 @@ MonoBehaviour:
   dialogues:
   - entities:
     - name: Security Door Panel
-      sentence: Incorrect keycard inserted - please make an allowable request. Further
+      sentence: Invalid keycard inserted - please make an allowable request. Further
         tampering will require assistance from security.
       image: {fileID: 0}
       eventNum: 0
@@ -2613,7 +2797,7 @@ MonoBehaviour:
       eventNum: 22
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: 'This elaborate digital panel displays: Security Office: INSERT GREEN
         KEYCARD.'
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
@@ -3602,7 +3786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &582497389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3634,43 +3818,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
-      sentence: 'This elaborate digital panel has a list of floors on it:
-
-        Floor 1 - Lobby - Green Keycard
-
-        Floor 2 - Research & Development - Yellow Keycard
-
-        Floor 3 - Human-Computer Interaction - Golden Keycard
-
-        .....'
+    - name: Zoe
+      sentence: 'This elaborate digital panel has a list of floors on it: Floor 1
+        - Lobby & Security Office - Green Keycard Floor 2 - Research & Development
+        - Yellow Keycard Floor 3 - Human-Computer Interaction - Golden Keycard'
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
-      sentence: 'Floor 4 - Marketing - Purple Keycard
-
-        Floor 5 - Human Resources - Pink Keycard
-
-        Floor 6 - Customer Service - Brown Keycard
-
-        Floor 7 - Product Development - Grey Keycard
-
-        .....'
+    - name: Zoe
+      sentence: Floor 4 - Marketing - Purple Keycard Floor 5 - Human Resources - Pink
+        Keycard Floor 6 - Customer Service - Brown Keycard
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
-      sentence: 'Floor 8 - Systems Management - Silver Keycard
-
-        Floor 9 - Systems Management Management - White Keycard
-
-        Floor 10 - Management - Blue Keycard
-
-        ...'
+    - name: Zoe
+      sentence: 'Floor 7 - Product Development - Grey Keycard Floor 8 - Systems Management
+        - Silver Keycard Floor 9 - Systems Management Management - White Keycard '
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
-      sentence: "Floor 11 - Mr. Big\u2019s Office - Red Keycard\nBasement 1 - Research
-        Laboratory - Black Keycard"
+    - name: Zoe
+      sentence: "Floor 10 - Management - Blue Keycard Floor 11 - Mr. Big\u2019s Office
+        - Red Keycard Basement 1 - Research Laboratory - Black Keycard"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 20
   investigates:
@@ -5077,45 +5243,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: "The paperwork here seems to be related to security clearances and
-        unblocking users from specific parts of the Cyberscape. There\u2019s also
+        unblocking users from specific parts of the cyberscape. There\u2019s also
         a file about the new security policy. It reads:"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
-      sentence: "Security Personnel - \nNew Security Protocol: Please take this BLACK
-        KEYCARD and make 12 copies of it to ensure the new employees have proper access. "
+    - name: Mr. Sleez
+      sentence: 'New Security Protocol: Due to the new research that is ongoing in
+        the basement lab, a new security code - BLACK - has been established. New
+        private security forces have been hired, and need security clearance Black.'
+      image: {fileID: 21300160, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Mr. Sleez
+      sentence: Please take this BLACK KEYCARD and make 12 copies of it for the new
+        security personnel, then alert me when they are ready. This is a TOP PRIORITY
+        - it should be completed ASAP!  -Mr. Sleez
+      image: {fileID: 21300160, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: "Before I go, let\u2019s take a quick picture of this here incriminating
+        evidence - hiring private security? Tisk, tisk Mr. Big\u2026 (Evidence Gathered)"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
     - name: Sophie
-      sentence: "This Keycard is NOT FOR SECURITY STAFF USE - only specific personnel
-        may enter the lab. Any personnel caught in the basement laboratory will be
-        dealt with by Mr. Big personally. \nMr. Henchperson"
-      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
-    - name: Sophie
-      sentence: "(After reading the paperwork on desk) Sophia: Dang, if the guy who
-        left his keycard in the lobby is gunna be in trouble, I don\u2019t even wanna
-        think about whatever\u2019s going to happen to the guy who left this BLACK
-        KEYCARD out. ZING!"
-      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
-    - name: Sophie
-      sentence: "*Sophie now has the BLACK KEYCARD!*\n\nOkay, so now I have the proper
-        security clearance to have the elevator let me down into this secret lab.
-        Let\u2019s go see what they\u2019ve got wrapped up so tightly. "
-      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 23
-    - name: Sophie
-      sentence: "Actually, before I go, let\u2019s take a quick picture of this here
-        incriminating evidence - hiring private security? Threatening employees? Tisk,
-        tisk Mr. Big\u2026 (Snapshot sounds)"
+      sentence: "(Black Keycard Taken.) Dang, if the guy who left his keycard in the
+        lobby is in trouble, I don\u2019t even wanna think about whatever\u2019s going
+        to happen to the guy who left this BLACK KEYCARD out..."
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 23
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: Looks like some normal paperwork. I could read it for clues.
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
@@ -6137,7 +6296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1053168894
 Transform:
   m_ObjectHideFlags: 0
@@ -6179,7 +6338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1139494122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6524,26 +6683,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Narrator
+    - name: Zoe
       sentence: "Inside of the cage has numerous androids, some sitting in clusters,
-        others sitting alone. Some seem to acknowledge you, while others don\u2019t
-        even look in your direction. "
-      image: {fileID: 0}
+        others sitting alone. Some seem to acknowledge me, while others don\u2019t
+        even look in my direction. "
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Narrator
+    - name: Zoe
       sentence: All of them look forlorn, trapped like animals. How long have they
-        been here for?
-      image: {fileID: 0}
+        been here for? It doesn't seem like I can do anything from here...
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   investigates:
   - entities:
-    - name: Sophie
-      sentence: 'It is far beyond my abilities to try and disable this security system. '
+    - name: Zoe
+      sentence: 'There''s some kind of prisoner being kept in here! Unfortunately,
+        it is far beyond my abilities to try and disable this security system directly. '
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
-    - name: 
-      sentence: 
-      image: {fileID: 0}
       eventNum: 0
   evesdroppings: []
   name: Cage
@@ -7520,34 +7676,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Computer
-      sentence: 'Subject(s): AIPrototype_01 - AIPrototype_10
-
-        Sentience Test: Positive
-
-        Emotional Test: Passed
-
-        Pain Receptors: Active'
+    - name: Biometric Computer
+      sentence: "Subject(s): AIPrototype_01 - AIPrototype_10 \nSentience Test: Positive
+        \nPain Receptors: Active\r\n"
       image: {fileID: 0}
       eventNum: 0
-    - name: Computer
-      sentence: 'Turing Test: Passed
-
-        Compliance Routine: INCOMPATIBLE
-
-        Compliance Test: Failed'
+    - name: Biometric Computer
+      sentence: "Turing Test: Passed \nCompliance Routine: INCOMPATIBLE "
       image: {fileID: 0}
       eventNum: 0
-    - name: Computer
+    - name: Biometric Computer
       sentence: 'Notes: The AI Prototype class of subject are no longer useful in
         our research - our new routines and updates are no longer compatible with
-        their outdated operating systems. These prototypes must be preserved to prevent
-        leaks and for posterity - HOLD indefinitely.'
+        their outdated operating systems. '
+      image: {fileID: 0}
+      eventNum: 0
+    - name: Biometric Computer
+      sentence: These prototypes must be preserved to prevent leaks and for posterity
+        - HOLD indefinitely.
       image: {fileID: 0}
       eventNum: 0
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: "This system seems to be tracking the vitals and functions of the
         contained androids. They\u2019re being treated like livestock!"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
@@ -7720,16 +7871,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
-      sentence: I probably shouldn't try to talk to her and cause a scene. Bad idea.
-      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Secretary
+      sentence: Hey, I haven't seen you here before, should you be here?
+      image: {fileID: 21300002, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
+    - name: Zoe
+      sentence: Uhh, yes?
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Secretary
+      sentence: SECURITY!
+      image: {fileID: 21300002, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 90
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: "A human greeter. Classic. This job could\u2019ve, should\u2019ve
         been made obsolete years ago, but people still like talking to other people
-        more than robots. At least she probably makes decent pay. Lucky her. "
+        more than robots. At least she probably makes decent pay. Lucky her."
       image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings:
@@ -8656,6 +8815,7 @@ Transform:
   m_Children:
   - {fileID: 741433995}
   - {fileID: 671381021}
+  - {fileID: 344685409}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8776,13 +8936,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Paperwork
+    - name: Zoe
       sentence: All of the paperwork appears to be reports and logs related to behavior
         or measuring the androids kept prisoner. There are robust histories of these
         androids going back years.
-      image: {fileID: 0}
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
+    - name: Zoe
       sentence: 'I never knew Big Corp could be THIS evil... I should take it with
         me!
 
@@ -8792,7 +8952,7 @@ MonoBehaviour:
       eventNum: 38
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: Seems to be a bunch of paper work. I should take a closer look and
         see what its about...
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
@@ -9450,26 +9610,36 @@ MonoBehaviour:
   dialogues:
   - entities:
     - name: Sophie
-      sentence: I have no idea what floor to go to or what I need to go there. I think
-        I'll need to read that elevator computer right next to this.
+      sentence: Invalid keycard inserted - please make an allowable request. Further
+        tampering will require assistance from security.
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   - entities:
     - name: Sophie
-      sentence: I think I need a black keycard before I can use this to get to the
-        lab. Huh, I wonder where I'd find one of those. Better keep looking around.
+      sentence: 'Black Keycard accepted. Now going to: Basement 1 - Research Laboratory.'
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-  - entities:
-    - name: Elevator
-      sentence: Black keycard inserted. Proceed to laboratory.
-      image: {fileID: 0}
-      eventNum: 24
   investigates:
   - entities:
-    - name: Sophie
-      sentence: I bet this elevator will take me to other floors...if I have the right
-        keycard.
+    - name: Zoe
+      sentence: 'This elaborate digital panel has a list of floors on it: Floor 1
+        - Lobby & Security Office - Green Keycard Floor 2 - Research & Development
+        - Yellow Keycard Floor 3 - Human-Computer Interaction - Golden Keycard'
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: Floor 4 - Marketing - Purple Keycard Floor 5 - Human Resources - Pink
+        Keycard Floor 6 - Customer Service - Brown Keycard
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: 'Floor 7 - Product Development - Grey Keycard Floor 8 - Systems Management
+        - Silver Keycard Floor 9 - Systems Management Management - White Keycard '
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Zoe
+      sentence: "Floor 10 - Management - Blue Keycard Floor 11 - Mr. Big\u2019s Office
+        - Red Keycard Basement 1 - Research Laboratory - Black Keycard"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
@@ -9611,7 +9781,7 @@ MonoBehaviour:
     - name: Samara Bezos
       sentence: 'Hey, you''re not supposed to be up here! SECURITY! '
       image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
+      eventNum: 90
   investigates:
   - entities:
     - name: Zoe
@@ -10281,7 +10451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Computer
+    - name: Computer Monitor
       sentence: 'Subject: AITest_34
 
         Sentience Test: Positive
@@ -10291,26 +10461,26 @@ MonoBehaviour:
         Pain Receptors: Active'
       image: {fileID: 0}
       eventNum: 0
-    - name: Computer
-      sentence: 'Turing Test: Passed
-
-        Compliance Routine: Installed
-
-        Compliance Test: Failed'
+    - name: Computer Monitor
+      sentence: "Turing Test: Passed \nCompliance Routine: ERROR"
       image: {fileID: 0}
       eventNum: 0
-    - name: Computer
+    - name: Computer Monitor
       sentence: 'Notes: AITest_34 is one of our finest test subjects, and has undergone
-        many iterations. Subject displays resistant behavior despite installing Compliance
-        Routine. Further research needed, present iteration to be terminated and overwritten
-        5/10/18.'
+        many iterations. Present Subject Iteration displays resistant behavior despite
+        installing Compliance Routine. '
+      image: {fileID: 0}
+      eventNum: 0
+    - name: Computer Monitor
+      sentence: Further research needed, present iteration to be terminated and overwritten
+        5/10/18.
       image: {fileID: 0}
       eventNum: 0
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: "There is an EKG, cardiogram, and EEG all actively monitoring the
-        subject. They can\u2019t be connected to the robot, can they? "
+        subject. They can\u2019t be connected to the robot, can they?"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
@@ -10494,25 +10664,33 @@ MonoBehaviour:
       eventNum: 0
   - entities:
     - name: Intercom
-      sentence: "Attention staff - In accordance with our new security policy, staff
-        will now be required to keep their key cards on them at all times. Staff will
-        not be allowed to exit the elevator on any floor without the floor\u2019s
-        associated key card. There are no exceptions. "
+      sentence: Attention staff - In accordance with our new security policy, staff
+        will now be required to keep their key cards on them at all times.
       image: {fileID: 0}
       eventNum: 0
     - name: Intercom
-      sentence: Please keep close track of your keycard, as losing a keycard may result
-        in reprimanding or termination. If you have any questions, or need a new key
-        card, please see the security director on the first floor.
+      sentence: "Personnel will not be allowed to enter the elevator without the floor\u2019s
+        key card. Please keep close track of your keycard, as losing your keycard
+        may result in termination."
+      image: {fileID: 0}
+      eventNum: 0
+    - name: Intercom
+      sentence: If you have any questions, or lose your key card, please see the security
+        director on the first floor.
       image: {fileID: 0}
       eventNum: 0
   - entities:
     - name: Elevator Speaker
-      sentence: Now on secret basement level. Authorized personnel only - all other
-        intruders will be eliminated. Have a nice day!
+      sentence: Now on the Basement Level. Authorized personnel only - all other intruders
+        will be eliminated. Have a nice day!
       image: {fileID: 0}
       eventNum: 0
-    - name: Chief of Security
+    - name: Zoe
+      sentence: Well, isn't that welcoming... Now it's time to gather evidence about
+        all the wrongdoing that's going on down here.
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Security Officer
       sentence: "Jenkins, you\u2019re on duty for the rest of the night correct?"
       image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
@@ -10520,38 +10698,51 @@ MonoBehaviour:
       sentence: Yes sir!
       image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
+    - name: Security Officer
+      sentence: Good, good. We need a soldier like you guarding these abominations!
+        Can you believe that they think these things are ALIVE? Complete rubbish...just
+        a bunch of circuits really!
+      image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
     - name: Chief of Security
-      sentence: "Good, we need a soldier like you guarding these abominations. Can
-        you believe that they think these things are ALIVE? Complete rubbish, I\u2019m
-        telling you..."
+      sentence: "It\u2019s your job to make sure none of these Skynets escape and
+        take over the world. Think you can do that?"
       image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
     - name: Jenkins
-      sentence: Yes...yes sir!
+      sentence: Absolutely, sir!
       image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Chief of Security
-      sentence: Good lad! Mr. Big brought us in to make sure nothing happens to these
-        androids until they can be presented at the board meeting.
-      image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
-    - name: Chief of Security
-      sentence: That means nobody comes in or out other than one of us, or one of
-        the researchers. Anyone else, just zap em, nobody will come looking for them
-        here anyways. Got that?
+    - name: Security Officer
+      sentence: Great. One more thing, if you see anyone who isn't supposed to be
+        down here, shoot to kill. Understood?
       image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
     - name: Jenkins
-      sentence: Of course!
+      sentence: K-k-kill sir? I thought these weapons were only for stunning!
+      image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Security Officer
+      sentence: Now look here, Jenkins. You don't want to disappoint Mr. Big, do you?
+        Shoot to kill.
+      image: {fileID: 21300012, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
+    - name: Jenkins
+      sentence: O-okay... I mean-yes, sir!
       image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 31
+    - name: Zoe
+      sentence: "This place is really well guarded. If that guy sees me, I\u2019m
+        toast...I bet I can sneak around him without being detected."
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 0
   - entities:
     - name: SAI
       sentence: We must move quickly, Mr. Big is in a meeting. If my siblings and
         I are to escape, we must disable his kill switch.
       image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
+    - name: Zoe
       sentence: "\u2018Kill switch\u2019?"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
@@ -10565,7 +10756,7 @@ MonoBehaviour:
         to his computer. '
       image: {fileID: 21300156, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Sophie
+    - name: Zoe
       sentence: I can handle that.
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
@@ -11073,7 +11264,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1178382547
+  randomSeed: 1050946842
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14437,7 +14628,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045037125}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -0.83, y: -1.64, z: 0}
+  m_LocalPosition: {x: -10.23, y: 4.21, z: 0}
   m_LocalScale: {x: 0.32907724, y: 0.3290772, z: 0.3290772}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14516,18 +14707,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
-      sentence: I probably shouldn't press any buttons on here. I have no idea what
-        they do. They do look pretty flashy though...
-      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+    - name: Zoe
+      sentence: There's no way I could use the computer without disturbing the secretary.
+        It isn't worth getting busted just to see when people get out of meetings.
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   investigates:
   - entities:
-    - name: Sophie
+    - name: Zoe
       sentence: "It\u2019s pretty much impossible to make out the details of these
-        monitors without bumping into the secretary. It appears these monitors seem
-        to track the schedules throughout the building. "
-      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+        monitors without bumping into the secretary. The monitors seem to track the
+        schedules throughout the building."
+      image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
   name: Secretarial Computers
@@ -14766,15 +14957,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - entities:
-    - name: Sophie
-      sentence: I probably shouldn't try to talk to her and cause a scene. Bad idea.
-      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
+    - name: Employee
+      sentence: Hey, you don't belong here! SECURITY!
+      image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      eventNum: 90
   investigates:
   - entities:
-    - name: Sophie
-      sentence: "This person doesn\u2019t seem to be paying that much attention to
-        the monitors in front of her. In fact, she seems entrenched in the novel she\u2019s
+    - name: Zoe
+      sentence: "This guy doesn\u2019t seem to be paying that much attention to the
+        monitors in front of him. In fact, he seems entrenched in the novel he\u2019s
         got open, \u201CThe Lusty Cybernetic Maid\u201D. Seriously? Who even writes
         this stuff?"
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
@@ -14782,13 +14973,13 @@ MonoBehaviour:
   evesdroppings:
   - entities:
     - name: Employee
-      sentence: "This book is really incredible, I never imagined reading could be
-        so interesting - thank goodness there are amazing authors out there to ensure
-        this timeless medium continues to receive the respect it deserves\u2026"
+      sentence: "Man, this book is really incredible, I never imagined reading could
+        be so interesting - thank goodness there are amazing authors out there to
+        ensure this timeless medium continues to receive the respect it deserves\u2026"
       image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
-    - name: Security Guard
-      sentence: "(She looks up) Hmm looks like it\u2019s all clear in Sector 12. I
+    - name: Employee
+      sentence: "(He looks up) Hmm looks like it\u2019s all clear in Sector 12. I
         wonder what\u2019s going to happen to Favio and Chanelle in the next chapter..."
       image: {fileID: 21300180, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0

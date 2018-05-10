@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour {
 
     /// <summary>
@@ -74,6 +75,7 @@ public class Manager : MonoBehaviour {
         Level1_0();
         //GoToLevel2();
         //GoToLevel3_1From2();
+        //GoToLevel4();
         //sentences = new Queue<string>();
 	}
 	void Update()
@@ -386,6 +388,7 @@ public class Manager : MonoBehaviour {
     }
 
     public void ResetLevel1() {
+        GameStats.CanMove = false;
         FadeAnimator.SetBool("Fade", true);
         StartCoroutine(Reset1());
     }
@@ -433,7 +436,9 @@ public class Manager : MonoBehaviour {
         PlayerRespawn = new Vector2(-32.3f, 2.2f);
         StartCoroutine(GoTo3_1(false));
     }
-
+    public void GoToLevel4() {
+        StartCoroutine(GoTo4());
+    }
     public void Level3Drive() {
         WhereToGo.transform.position = new Vector2(-14.72f, 2.52f);
         WhereToGo.Play();
@@ -518,6 +523,25 @@ public class Manager : MonoBehaviour {
         else if(eventNum == 90) {
             ResetLevel1();
         }
+        else if(eventNum == 100) {
+            // end game
+            EndGame();
+        }
+    }
+
+    public void EndGame() {
+        GameStats.CanMove = false;
+        GameStats.Blue = false;
+        GameStats.Green = false;
+        GameStats.IsStealthed = false;
+        StartCoroutine(EndMe());
+
+    }
+
+    IEnumerator EndMe() {
+        FadeAnimator.SetBool("Fade", true);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("EndGame");
     }
 
     IEnumerator GoTo4() {
@@ -529,6 +553,7 @@ public class Manager : MonoBehaviour {
         Level3_2.SetActive(false);
         Level4.SetActive(true);
         FadeAnimator.SetBool("Fade", false);
+        WhereToGo.transform.position = new Vector2(-10.23f, 4.21f);
         Announcement(3);
     }
     IEnumerator Reset1() {
@@ -536,6 +561,7 @@ public class Manager : MonoBehaviour {
         Player.transform.position = PlayerRespawn;
             //new Vector2(-3.5f, -7.5f);
         FadeAnimator.SetBool("Fade", false);
+        GameStats.CanMove = true;
     }
 
     IEnumerator GoTo2(bool wanna) {
@@ -614,8 +640,6 @@ public class Manager : MonoBehaviour {
             }
         } else if(currentInteractable.Type == 11) {
             if(GameStats.Blue) {
-                StartDialogue(currentInteractable, 2);
-            } else if(GameStats.KnowsBlue) {
                 StartDialogue(currentInteractable, 1);
             }
             else {
