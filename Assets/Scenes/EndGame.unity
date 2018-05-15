@@ -259,8 +259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69.6, y: -74.400024}
-  m_SizeDelta: {x: 1103, y: 44.4}
+  m_AnchoredPosition: {x: -56.3, y: -74.400024}
+  m_SizeDelta: {x: 1129.5, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156430144
 MonoBehaviour:
@@ -368,7 +368,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I've tried to never be afraid of the future
+  m_Text: But not all progress is good
 --- !u!222 &177209599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -407,8 +407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.647, y: -30}
-  m_SizeDelta: {x: 510.8, y: 44.4}
+  m_AnchoredPosition: {x: -248.06528, y: -30}
+  m_SizeDelta: {x: 746.1, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345774348
 MonoBehaviour:
@@ -442,7 +442,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What have
+  m_Text: I've always wanted to be
 --- !u!222 &345774349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -562,8 +562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -74.400024}
-  m_SizeDelta: {x: 790.5, y: 44.4}
+  m_AnchoredPosition: {x: 49.32573, y: -74.400024}
+  m_SizeDelta: {x: 865.15, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617668591
 MonoBehaviour:
@@ -597,7 +597,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '...to never fear progress...'
+  m_Text: and not all bad things...
 --- !u!222 &617668592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,8 +636,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.2, y: -74.400024}
-  m_SizeDelta: {x: 561.3, y: 44.4}
+  m_AnchoredPosition: {x: 217.9, y: -74.400024}
+  m_SizeDelta: {x: 599.1, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626888679
 MonoBehaviour:
@@ -671,7 +671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: an agent of change.
+  m_Text: to embrace progress
 --- !u!222 &626888680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sometimes it may do more harm...
+  m_Text: 
 --- !u!222 &770635077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -858,8 +858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -203.30023, y: -30.000061}
-  m_SizeDelta: {x: 917.4, y: 44.4}
+  m_AnchoredPosition: {x: -121.65588, y: -30.000061}
+  m_SizeDelta: {x: 1278.3, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132170707
 MonoBehaviour:
@@ -893,7 +893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: But not all progress is good...
+  m_Text: are worse than their alternatives...
 --- !u!222 &1132170708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -932,8 +932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: -74.399994}
-  m_SizeDelta: {x: 510.8, y: 44.4}
+  m_AnchoredPosition: {x: 47.8, y: -74.399994}
+  m_SizeDelta: {x: 606.4, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190052981
 MonoBehaviour:
@@ -967,7 +967,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I done?
+  m_Text: an agent of change
 --- !u!222 &1190052982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1068,8 +1068,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -219.49945, y: -30.000061}
-  m_SizeDelta: {x: 866.9, y: 44.4}
+  m_AnchoredPosition: {x: -322.9, y: -27.799992}
+  m_SizeDelta: {x: 875.7, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643514295
 MonoBehaviour:
@@ -1221,8 +1221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -218.12854, y: -30.000061}
-  m_SizeDelta: {x: 605, y: 44.4}
+  m_AnchoredPosition: {x: -194.4, y: -30.000061}
+  m_SizeDelta: {x: 1132.8, y: 44.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954399496
 MonoBehaviour:
@@ -1256,7 +1256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I always wanted to be
+  m_Text: I never wanted to fear what comes next,
 --- !u!222 &1954399497
 CanvasRenderer:
   m_ObjectHideFlags: 0

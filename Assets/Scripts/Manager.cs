@@ -560,7 +560,14 @@ public class Manager : MonoBehaviour {
             Level3Drive();
         }
         else if(eventNum == 52) {
+            GameStats.HasDrive = true;
             Level3Elevator();   
+        }
+        else if(eventNum == 53) {
+            
+            Destroy(Jenkins.GetComponent<Guard>());
+            Collider2D[] stuff = Jenkins.GetComponents<Collider2D>();
+
         }
         else if (eventNum == 55) {
             // move to level 4
@@ -584,6 +591,8 @@ public class Manager : MonoBehaviour {
         GameStats.Blue = false;
         GameStats.Green = false;
         GameStats.IsStealthed = false;
+        GameStats.HasDrive = false;
+
         StartCoroutine(EndMe());
 
     }
@@ -597,13 +606,15 @@ public class Manager : MonoBehaviour {
     IEnumerator GoTo4() {
         FadeAnimator.SetBool("Fade", true);
         yield return new WaitForSeconds(1.0f);
+        PlayerRespawn = new Vector2(-2f, -8f);
         Level1.SetActive(false);
         Level2.SetActive(false);
         Level3_1.SetActive(false);
         Level3_2.SetActive(false);
         Level4.SetActive(true);
+        WhereToGo.transform.position = new Vector2(-0.57f, 10.68f);
+        Player.transform.position = PlayerRespawn;
         FadeAnimator.SetBool("Fade", false);
-        WhereToGo.transform.position = new Vector2(-10.23f, 4.21f);
         Announcement(3);
     }
     IEnumerator Reset1() {

@@ -1047,7 +1047,7 @@ MonoBehaviour:
 
         *Jenkins armor power armor shuts down. He is now trapped in his suit*'
       image: {fileID: 21300028, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
-      eventNum: 0
+      eventNum: 53
     - name: Voice
       sentence: <He shouldn't be moving around for a while. Now, Zoe. I hope you have
         already realized what is going on here.>
@@ -2575,7 +2575,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 344685409}
-  - component: {fileID: 344685412}
   - component: {fileID: 344685411}
   - component: {fileID: 344685410}
   - component: {fileID: 344685413}
@@ -2593,7 +2592,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344685408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.667, y: 0.241, z: 0}
+  m_LocalPosition: {x: 0.74, y: 2.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1634684665}
@@ -2611,7 +2610,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17467904, y: 0.08017138}
+  m_Offset: {x: -0.1828181, y: 0.10256817}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2622,7 +2621,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6506419, y: 0.36865133}
+  m_Size: {x: 0.13671568, y: 0.17630406}
   m_EdgeRadius: 0
 --- !u!114 &344685411
 MonoBehaviour:
@@ -2723,31 +2722,6 @@ MonoBehaviour:
   interacting: 0
   Type: 1
   interactPrompt: 
---- !u!61 &344685412
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 344685408}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.22111277, y: 0.08017138}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5577744, y: 0.28848016}
-  m_EdgeRadius: 0
 --- !u!82 &344685413
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4835,12 +4809,12 @@ Prefab:
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -2.7733402
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8.104488
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 224535087015487706, guid: 368b8be9d2b124818986a30356787d1f,
         type: 2}
@@ -6250,7 +6224,7 @@ GameObject:
   - component: {fileID: 685130068}
   - component: {fileID: 685130070}
   m_Layer: 0
-  m_Name: Fourth Computer (1)
+  m_Name: SAIs Comp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6315,7 +6289,7 @@ MonoBehaviour:
       image: {fileID: 21300066, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
   evesdroppings: []
-  name: Cage
+  name: SAI's Computer
   counter: 0
   image: {fileID: 0}
   talking: 0
@@ -6973,6 +6947,112 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &777660944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 777660945}
+  - component: {fileID: 777660948}
+  - component: {fileID: 777660947}
+  - component: {fileID: 777660946}
+  m_Layer: 0
+  m_Name: Other Computers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777660945
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777660944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1634684665}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &777660946
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777660944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.96650577, y: 1.5979083}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8389163, y: 0.610412}
+  m_EdgeRadius: 0
+--- !u!61 &777660947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777660944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.169604, y: 0.33081558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5066786, y: 0.33836883}
+  m_EdgeRadius: 0
+--- !u!61 &777660948
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777660944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.8160865, y: 0.33343077}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4619006, y: 0.33313847}
+  m_EdgeRadius: 0
 --- !u!1 &800660999
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,7 +8004,7 @@ MonoBehaviour:
       sentence: "See that little X button on the interface? <color=red>Press the X
         button to enter stealth. </color>Once you\u2019ve pressed it, you\u2019ll
         be invisible until you press it again."
-      image: {fileID: 21300064, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
+      image: {fileID: 21300000, guid: 7eb437e729dc24058aaa534aabd121ee, type: 3}
       eventNum: 0
     - name: Zoe
       sentence: Perfect, sounds easy.
@@ -11882,6 +11962,7 @@ Transform:
   - {fileID: 671381021}
   - {fileID: 344685409}
   - {fileID: 1429397437}
+  - {fileID: 777660945}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12363,8 +12444,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1423341027
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 0dc05e0aad985485c9b6e05fb493dbc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14807,7 +14888,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1050946842
+  randomSeed: -436295960
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -18171,7 +18252,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045037125}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -10.23, y: 4.21, z: 0}
+  m_LocalPosition: {x: -0.57, y: 10.68, z: 0}
   m_LocalScale: {x: 0.32907724, y: 0.3290772, z: 0.3290772}
   m_Children: []
   m_Father: {fileID: 0}

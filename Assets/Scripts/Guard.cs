@@ -30,16 +30,18 @@ public class Guard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!GameStats.IsStealthed || (type == 1 && triggered == 0))
+        if ((!GameStats.IsStealthed && type!=1) || (type == 1 && triggered == 0))
         {
             M.StartDialogue(this);
             triggered = 1;
         }
 
+
+
     }
 	private void OnTriggerStay2D(Collider2D collision)
 	{
-        if (!GameStats.IsStealthed || (type == 1 && triggered == 0))
+        if ((!GameStats.IsStealthed && type != 1) || (type == 1 && triggered == 0))
         {
             M.StartDialogue(this);
             triggered = 1;
